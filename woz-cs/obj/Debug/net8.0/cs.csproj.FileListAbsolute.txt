@@ -1,0 +1,15 @@
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/bin/Debug/net8.0/cs
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/bin/Debug/net8.0/cs.deps.json
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/bin/Debug/net8.0/cs.runtimeconfig.json
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/bin/Debug/net8.0/cs.dll
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/bin/Debug/net8.0/cs.pdb
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.GeneratedMSBuildEditorConfig.editorconfig
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.AssemblyInfoInputs.cache
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.AssemblyInfo.cs
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.csproj.CoreCompileInputs.cache
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.sourcelink.json
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.dll
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/refint/cs.dll
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.pdb
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/cs.genruntimeconfig.cache
+/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/Debug/net8.0/ref/cs.dll
