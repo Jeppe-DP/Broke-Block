@@ -2,27 +2,28 @@
  */
 
 class World {
-  Space entry;
+  Space start;
   
   public World () {
-    Space entry    = new Space("Entry");
-    Space corridor = new Space("Corridor");
-    Space cave     = new Space("Cave");
-    Space pit      = new Space("Darkest Pit");
-    Space outside  = new Space("Outside");
+    Space start    = new Space("Start");
+    Space byggematerialer = new Space("Byggematerialer");
+    Space by     = new Space("By");
+    Space feje      = new Space("Feje");
+    Space byg  = new Space("Byg");
+    Space mere_tid_i_vildnis = new Space("mere_tid_i_vildnis");
     
-    entry.AddEdge("door", corridor);
-    corridor.AddEdge("door", cave);
-    cave.AddEdge("north", pit);
-    cave.AddEdge("south", outside);
-    pit.AddEdge("door", cave);
-    outside.AddEdge("door", cave);
+    start.AddEdge("byggematerialer", byggematerialer);
+    start.AddEdge("By", by);
+    by.AddEdge("feje", feje);
+    by.AddEdge("Byg", byg);
+    byggematerialer.AddEdge("Byg", byg);
+    byggematerialer.AddEdge("mere_tid_i_vildnis", mere_tid_i_vildnis);
     
-    this.entry = entry;
+    this.start = start;
   }
   
   public Space GetEntry () {
-    return entry;
+    return start;
   }
 }
 
