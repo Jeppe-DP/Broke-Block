@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj": {}
+    "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj": {}
   },
   "projects": {
-    "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj": {
+    "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj",
+        "projectUniqueName": "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj",
         "projectName": "cs",
-        "projectPath": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj",
-        "packagesPath": "/home/jeppe-dp/.nuget/packages/",
-        "outputPath": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/",
+        "projectPath": "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj",
+        "packagesPath": "/home/jaevs/.nuget/packages/",
+        "outputPath": "/home/jaevs/studiemappe/Broke-Block/woz-cs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jeppe-dp/.nuget/NuGet/NuGet.Config"
+          "/home/jaevs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/var/snap/dotnet/common/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/var/snap/dotnet/common/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

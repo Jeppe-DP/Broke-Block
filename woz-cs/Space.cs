@@ -5,9 +5,25 @@ class Space : Node {
   public Space (String name) : base(name)
   {
   }
+
+  public string GetDescription()
+  {
+    string description = "";
+    string location = name;
+    if(location == "By")
+    {
+      description = "Byen er i en forfalden tilstand";
+    }
+    else
+    {
+      description = "tom";
+    }
+    return description;
+  }
   
   public void Welcome () {
     Console.WriteLine("You are now at "+name);
+    Console.WriteLine(GetDescription());
     HashSet<string> exits = edges.Keys.ToHashSet();
     Console.WriteLine("Current exits are:");
     foreach (String exit in exits) {

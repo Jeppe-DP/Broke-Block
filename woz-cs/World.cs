@@ -5,11 +5,11 @@ class World {
   Space start;
   
   public World () {
-    Space start    = new Space("Start");
-    Space byggematerialer = new Space("Byggematerialer");
-    Space by     = new Space("By");
-    Space feje      = new Space("Feje");
-    Space byg  = new Space("Byg");
+    Space start              = new Space("Start");
+    Space byggematerialer    = new Space("Byggematerialer");
+    Space by                 = new Space("By");
+    Space feje               = new Space("Feje");
+    Space byg                = new Space("Byg");
     Space mere_tid_i_vildnis = new Space("mere_tid_i_vildnis");
     
     start.AddEdge("byggematerialer", byggematerialer);
