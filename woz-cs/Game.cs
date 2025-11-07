@@ -6,7 +6,7 @@ class Game {
   static Context  context  = new Context(world.GetEntry());
   static ICommand fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
-  
+
   private static void InitRegistry () {
     ICommand cmdExit = new CommandExit();
     registry.Register("exit", cmdExit);
@@ -15,13 +15,13 @@ class Game {
     registry.Register("go", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
   }
-  
+
   static void Main (string[] args) {
     Console.WriteLine("Welcome to the World of Zuul!");
-    
+
     InitRegistry();
     context.GetCurrent().Welcome();
-    
+
     while (context.IsDone()==false) {
       Console.Write("> ");
       string? line = Console.ReadLine();
@@ -30,3 +30,7 @@ class Game {
     Console.WriteLine("Game Over 😥");
   }
 }
+
+
+
+
