@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj": {}
+    "/home/jeppe/Studie/Broke-Block/woz-cs/cs.csproj": {}
   },
   "projects": {
-    "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj": {
+    "/home/jeppe/Studie/Broke-Block/woz-cs/cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj",
+        "projectUniqueName": "/home/jeppe/Studie/Broke-Block/woz-cs/cs.csproj",
         "projectName": "cs",
-        "projectPath": "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj",
-        "packagesPath": "/home/jaevs/.nuget/packages/",
-        "outputPath": "/home/jaevs/studiemappe/Broke-Block/woz-cs/obj/",
+        "projectPath": "/home/jeppe/Studie/Broke-Block/woz-cs/cs.csproj",
+        "packagesPath": "/home/jeppe/.nuget/packages/",
+        "outputPath": "/home/jeppe/Studie/Broke-Block/woz-cs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jaevs/.nuget/NuGet/NuGet.Config"
+          "/home/jeppe/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/var/snap/dotnet/common/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
