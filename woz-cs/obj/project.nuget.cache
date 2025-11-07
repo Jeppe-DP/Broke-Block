@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "htYy4Mz56pQNYan3H0sIeRdkq51b+gPYAB9SputydPOoYn+Z6INsKkqvwF82vGMthGWSc39zQDqh+hJpvLHyHw==",
+  "dgSpecHash": "OiTRCrlistw=",
   "success": true,
-  "projectFilePath": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\amalh\\desktop\\universitet\\semesterprojekt\\kode\\Broke-Block\\woz-cs\\cs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amalh\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\amalh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\amalh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\amalh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.19\\microsoft.netcore.app.host.win-x64.8.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

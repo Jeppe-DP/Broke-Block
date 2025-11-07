@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj": {}
+    "C:\\Users\\amalh\\desktop\\universitet\\semesterprojekt\\kode\\Broke-Block\\woz-cs\\cs.csproj": {}
   },
   "projects": {
-    "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj": {
+    "C:\\Users\\amalh\\desktop\\universitet\\semesterprojekt\\kode\\Broke-Block\\woz-cs\\cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj",
+        "projectUniqueName": "C:\\Users\\amalh\\desktop\\universitet\\semesterprojekt\\kode\\Broke-Block\\woz-cs\\cs.csproj",
         "projectName": "cs",
-        "projectPath": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/cs.csproj",
-        "packagesPath": "/home/jeppe-dp/.nuget/packages/",
-        "outputPath": "/home/jeppe-dp/semesterprojekt/WOZ/woz-cs/obj/",
+        "projectPath": "C:\\Users\\amalh\\desktop\\universitet\\semesterprojekt\\kode\\Broke-Block\\woz-cs\\cs.csproj",
+        "packagesPath": "C:\\Users\\amalh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amalh\\desktop\\universitet\\semesterprojekt\\kode\\Broke-Block\\woz-cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jeppe-dp/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\amalh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -48,12 +54,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/var/snap/dotnet/common/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
