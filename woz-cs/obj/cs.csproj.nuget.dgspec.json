@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj": {}
+    "C:\\Users\\selma\\brokeblock\\Broke-Block\\woz-cs\\cs.csproj": {}
   },
   "projects": {
-    "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj": {
+    "C:\\Users\\selma\\brokeblock\\Broke-Block\\woz-cs\\cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj",
+        "projectUniqueName": "C:\\Users\\selma\\brokeblock\\Broke-Block\\woz-cs\\cs.csproj",
         "projectName": "cs",
-        "projectPath": "/home/jaevs/studiemappe/Broke-Block/woz-cs/cs.csproj",
-        "packagesPath": "/home/jaevs/.nuget/packages/",
-        "outputPath": "/home/jaevs/studiemappe/Broke-Block/woz-cs/obj/",
+        "projectPath": "C:\\Users\\selma\\brokeblock\\Broke-Block\\woz-cs\\cs.csproj",
+        "packagesPath": "C:\\Users\\selma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\selma\\brokeblock\\Broke-Block\\woz-cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jaevs/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\selma\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/var/snap/dotnet/common/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
