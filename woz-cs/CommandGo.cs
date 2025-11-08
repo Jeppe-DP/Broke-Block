@@ -7,10 +7,11 @@ class CommandGo : BaseCommand, ICommand {
   }
   
   public void Execute (Context context, string command, string[] parameters) {
-    if (GuardEq(parameters, 1)) {
+    if (parameters.Length == 0) {
       Console.WriteLine("I don't seem to know where that is 🤔");
       return;
     }
+    string destination = string.Join(" ", parameters);
     context.Transition(parameters[0]);
   }
 }
