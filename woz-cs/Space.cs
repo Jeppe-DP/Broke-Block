@@ -45,7 +45,7 @@ class Space : Node {
       description = "Som borgermester, kontakter du andre nærliggende byer for at købe og forhandle om ressourcer til hospitalet. Efter hårde, men succesfulde forhandlinger vender du tilbage til hospitalet med medicin og diverse ting. Tag medicin og ressourcer, og sælg det videre eller giv Aziz og hospitalet ressourcerne";
     }
 
-    else if (location == "sælg Medicin")
+    else if (location == "sælg medicin")
     {
       description = "Du får et godt tilbud fra en nærliggende bande som er interesseret i medicinen du har modtaget. De tilbyder flere penge, end du nogensinde har haft og truer dig endda hvis du ikke sælger det til dem. Du giver ind for fristelsen og sælger medicinen videre.Et par uger efter er der et stort udbrud af ebola i Broke-Block. Det nye hospital har ingen antibiotika og dermed dør 80% af indbyggerne. Inklusiv dig";
     }

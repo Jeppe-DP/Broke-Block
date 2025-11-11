@@ -12,7 +12,7 @@ class World {
     Space byg_hus                    = new Space("byg hus");
     Space mere_tid_i_vildnis         = new Space("mere tid i vildnis");
     Space hospital                   = new Space ("ressourcer til hospital");
-    Space ignorere_hospital          = new Space ("ignorere Jørgen");
+    Space sælg_medicin               = new Space ("sælg medicin");
     Space skole                      = new Space ("byg skole");
     Space bar                        = new Space ("byg bar");
     Space samarbejde_med_bønder      = new Space ("samarbejde med bønder");
@@ -32,7 +32,7 @@ class World {
     vildnis_byggematerialer.AddEdge("byg hus", byg_hus);
     vildnis_byggematerialer.AddEdge("mere tid i vildnis", mere_tid_i_vildnis);
     byg_hus.AddEdge("ressourcer til hospital", hospital);
-    byg_hus.AddEdge("ignorere Jørgen", ignorere_hospital);
+    byg_hus.AddEdge("sælg medicin", sælg_medicin);
     hospital.AddEdge("byg skole", skole);
     hospital.AddEdge("byg bar", bar);
     skole.AddEdge("samarbejde med bønder", samarbejde_med_bønder);
