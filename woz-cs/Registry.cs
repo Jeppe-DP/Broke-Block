@@ -16,7 +16,7 @@ class Registry {
   }
   
   public void Dispatch (string line) {
-    string[] elements = line.Split(" ");
+    string[] elements = line.Split(" ", 2, StringSplitOptions.RemoveEmptyEntries);
     string command = elements[0];
     string[] parameters = GetParameters(elements);
     (commands.ContainsKey(command) ? GetCommand(command) : fallback).Execute(context, command, parameters);
