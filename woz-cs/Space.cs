@@ -30,7 +30,7 @@ class Space : Node {
       description = "Tilbage ved husene møder du Aziz og Kofi, de hjælper dig med at reparere husene.Efterfølgende kommer du i snak med Aziz, so fortæller stolt at han er sygeplejerske hos det lokale hospital. Aziz fortæller sørgmodigt, at hospitalet har stærkt behov for ressourcer. Heldigvis har du fået medicin fra en af nabolandene. Vil du give medicinen et hospitalet, eller beholde medicinen for dig selv indtil videre?";
     }
 
-    else if (location=="Feje")
+    else if (location=="feje")
     {
       description = "Du går i gang med at rydde op i byen da det er vigtigt at holde sine omgivelser rene. Da du fejer kraftigt op af en hytte, bryder hele hytten sammen og kvaser dig";
     }
@@ -106,6 +106,7 @@ class Space : Node {
     return description;
   }
   public void Welcome () {
+    Console.Clear();
     Console.WriteLine("You are now at "+name);
     Console.WriteLine(GetDescription());
     HashSet<string> exits = edges.Keys.ToHashSet();
