@@ -106,10 +106,15 @@ class Space : Node {
     return description;
   }
   public void Welcome () {
-    Console.WriteLine("You are now at "+name);
+  //tilføjet mellemrum
+    Console.WriteLine();
+  //oversat
+    Console.WriteLine("Du er nu ved "+name);
+    Console.WriteLine();
     Console.WriteLine(GetDescription());
     HashSet<string> exits = edges.Keys.ToHashSet();
-    Console.WriteLine("Current exits are:");
+    Console.WriteLine();
+    Console.WriteLine("Nuværende udgange er:");
     foreach (String exit in exits)
     {
       Console.WriteLine(" - "+exit);
