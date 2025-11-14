@@ -27,7 +27,7 @@ class Node {
     items.Add (item);
   }
 
-  public Item PickUpItem (string name)
+  public Item? PickUpItem (string name)
   {
     foreach (Item item in items)
     {
@@ -42,18 +42,5 @@ class Node {
 
     return null;
   }
-  
-  /*
-  public bool ContainsItem (string name)
-  {
-    foreach (Item item in items)
-    {
-      if (item.Name.Equals (name)) return true;
-    }
-
-    return false;
-  }
-
-  */
 }
 

@@ -45,9 +45,9 @@ class World {
 
     by.AddItem (new Item ("hammer"));
     by.AddItem (new Item ("søm"));
-    //by.AddItem (new Item ("søm"));
-    //by.AddItem (new Item ("træ"));
-    //by.AddItem (new Item ("søm"));
+    by.AddItem (new Item ("søm"));
+    by.AddItem (new Item ("træ"));
+    by.AddItem (new Item ("søm"));
     
     this.start = start;
   }

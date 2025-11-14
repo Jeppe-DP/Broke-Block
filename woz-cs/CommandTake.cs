@@ -10,9 +10,9 @@ class CommandTake : BaseCommand, ICommand
 
   public void Execute (Context context, string command, string[] parameters)
   {
-    Space location = context.GetCurrent ();
-
     string name = parameters[0].ToLower ();
+
+    Space location = context.GetCurrent ();
 
     Item? item = location.PickUpItem (name);
 
