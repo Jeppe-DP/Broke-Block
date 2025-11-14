@@ -14,11 +14,15 @@ class Game {
     registry.Register("bye", cmdExit);
     registry.Register("vælg", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
+    registry.Register("take", new CommandTake());
+    registry.Register("inventory", new CommandPrint());
   }
   
   static void Main (string[] args) {
     Console.WriteLine("Velkommen til Broke-Broke!");
     
+    Inventory.inventory = new List<string> ();
+
     InitRegistry();
     context.GetCurrent().Welcome();
     
