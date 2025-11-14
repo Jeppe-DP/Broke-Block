@@ -107,11 +107,12 @@ class Space : Node {
   }
   public void Welcome () {
   //tilføjet mellemrum
+    Console.Clear();
     Console.WriteLine();
   //oversat
     Console.WriteLine("Du er nu ved "+name);
     Console.WriteLine();
-    Console.Clear();
+
     Console.WriteLine(GetDescription());
     HashSet<string> exits = edges.Keys.ToHashSet();
     Console.WriteLine();
