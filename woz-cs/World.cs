@@ -43,11 +43,11 @@ class World {
     sælge_råvarer.AddEdge("forbedre veje", forbedre_veje);
     sælge_råvarer.AddEdge("behold veje", behold_veje);
 
-    by.AddItem ("Hammer");
-    by.AddItem ("Søm");
-    //by.AddItem (new Item ("Søm"));
-    //by.AddItem (new Item ("Træ"));
-    //by.AddItem (new Item ("Søm"));
+    by.AddItem (new Item ("hammer"));
+    by.AddItem (new Item ("søm"));
+    //by.AddItem (new Item ("søm"));
+    //by.AddItem (new Item ("træ"));
+    //by.AddItem (new Item ("søm"));
     
     this.start = start;
   }

@@ -4,7 +4,7 @@
 class Node {
   protected string name;
   protected Dictionary<string, Node> edges = new Dictionary<string, Node>();
-  protected List<string> items = new List<string>();
+  protected List<Item> items = new List<Item>();
   
   public Node (string name) {
     this.name = name;
@@ -22,19 +22,38 @@ class Node {
     return edges[direction];
   }
 
-  public void AddItem (string item)
+  public void AddItem (Item item)
   {
     items.Add (item);
   }
 
-  public void RemoveItem (string item)
+  public Item PickUpItem (string name)
   {
-    items.Remove (item);
+    foreach (Item item in items)
+    {
+      if (item.Name.Equals (name))
+      {
+        Item tmp = item;
+        items.Remove (item);
+
+        return tmp;
+      }
+    }
+
+    return null;
   }
   
-  public bool ContainsItem (string item)
+  /*
+  public bool ContainsItem (string name)
   {
-    return items.Contains (item);
+    foreach (Item item in items)
+    {
+      if (item.Name.Equals (name)) return true;
+    }
+
+    return false;
   }
+
+  */
 }
 

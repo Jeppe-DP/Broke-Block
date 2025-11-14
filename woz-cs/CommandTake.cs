@@ -12,17 +12,18 @@ class CommandTake : BaseCommand, ICommand
   {
     Space location = context.GetCurrent ();
 
-    string item = parameters[0];
+    string name = parameters[0].ToLower ();
 
-    if (location.ContainsItem (item))
+    Item? item = location.PickUpItem (name);
+
+    if (item != null)
     {
-      Inventory.PickUp (item);
-      location.RemoveItem (item);
-      Console.WriteLine ("You picked up the " + item);
+      Inventory.Add (item);
+      Console.WriteLine ("You picked up the " + name);
     }
     else
     {
-      Console.WriteLine ("There is no " + item + " here.");
+      Console.WriteLine ("There is no " + name + " here.");
     }
   }
 }
