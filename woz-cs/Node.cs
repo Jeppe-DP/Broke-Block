@@ -4,7 +4,7 @@
 class Node {
   protected string name;
   protected Dictionary<string, Node> edges = new Dictionary<string, Node>();
-  protected List<Item> items = new List<Item>();
+  protected List<string> items = new List<string>();
   
   public Node (string name) {
     this.name = name;
@@ -22,14 +22,19 @@ class Node {
     return edges[direction];
   }
 
-  public void AddItem (Item material)
+  public void AddItem (string item)
   {
-    items.Add (material);
+    items.Add (item);
+  }
+
+  public void RemoveItem (string item)
+  {
+    items.Remove (item);
   }
   
-  public bool IsInSpace (string item)
+  public bool ContainsItem (string item)
   {
-    return (item.Equals (item));
+    return items.Contains (item);
   }
 }
 
