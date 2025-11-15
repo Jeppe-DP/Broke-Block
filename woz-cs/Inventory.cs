@@ -1,26 +1,20 @@
-/* Implementing an inventory
+/* Implementation of an inventory
  */
 
- public class Inventory
- {
-    public static List<string> inventory;
+public class Inventory
+{
+  private static List<Item> inventory = new List<Item>();
 
-    public static void PickUp (string name)
+  public static void Add (Item item)
+  {
+    inventory.Add (item);
+  }
+
+  public static void PrintInventory ()
+  {
+    foreach (Item item in inventory)
     {
-        //if (context.GetCurrent ().IsInSpace (item))
-        //{
-          inventory.Add (name);
-          
-        //}
-
-        
-    }   
-
-    public static void PrintInventory ()
-    {
-      foreach (string item in inventory)
-      {
-        Console.WriteLine (item);
-      }
+      Console.WriteLine (item);
     }
- }
+  }
+}

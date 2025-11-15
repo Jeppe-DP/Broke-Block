@@ -22,14 +22,25 @@ class Node {
     return edges[direction];
   }
 
-  public void AddItem (Item material)
+  public void AddItem (Item item)
   {
-    items.Add (material);
+    items.Add (item);
   }
-  
-  public bool IsInSpace (string item)
+
+  public Item? PickUpItem (string name)
   {
-    return (item.Equals (item));
+    foreach (Item item in items)
+    {
+      if (item.Name.Equals (name))
+      {
+        Item tmp = item;
+        items.Remove (item);
+
+        return tmp;
+      }
+    }
+
+    return null;
   }
 }
 

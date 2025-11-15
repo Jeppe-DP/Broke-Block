@@ -24,7 +24,6 @@ class World {
     Space forbedre_veje              = new Space ("forbedre veje");
     Space behold_veje                = new Space ("behold veje");
 
-    
     start.AddEdge("vildnis", vildnis_byggematerialer);
     start.AddEdge("by", by);
     by.AddEdge("feje", feje);
@@ -44,11 +43,11 @@ class World {
     sælge_råvarer.AddEdge("forbedre veje", forbedre_veje);
     sælge_råvarer.AddEdge("behold veje", behold_veje);
 
-    by.AddItem (new Item ("Hammer"));
-    by.AddItem (new Item ("Søm"));
-    by.AddItem (new Item ("Søm"));
-    by.AddItem (new Item ("Træ"));
-    by.AddItem (new Item ("Søm"));
+    by.AddItem (new Tool ("hammer"));
+    by.AddItem (new Material ("søm"));
+    by.AddItem (new Material ("søm"));
+    by.AddItem (new Material ("træ"));
+    by.AddItem (new Material ("søm"));
     
     byg_hus.AddItem (new Item ("medicin"));
 

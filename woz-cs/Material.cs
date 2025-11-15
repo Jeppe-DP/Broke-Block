@@ -1,10 +1,13 @@
-class Materialer
+/* Class representing materials in the game
+ */
+
+class Material : Item
 {
     int træ;
     int metal;
     int mad;
 
-    public Materialer()
+    public Material (string name) : base (name)
     {
         træ = 0;
         metal = 0;
