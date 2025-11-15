@@ -1,4 +1,4 @@
-/* Main class for launching the game
+ /* Main class for launching the game
  */
 
 class Game {
@@ -30,5 +30,12 @@ class Game {
       if (line!=null) registry.Dispatch(line);
     }
     Console.WriteLine("Game Over 😥");
+  }
+
+
+  //gør world mere statisk
+  public static World GetWorld()
+  {
+    return world;
   }
 }
