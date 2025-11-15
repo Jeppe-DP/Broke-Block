@@ -157,11 +157,9 @@ class Space : Node {
 
    return description;
   }
+
+
   public void Welcome () {
-  //tilføjet mellemrum
-    Console.Clear();
-    Console.WriteLine();
-  //oversat
     Console.WriteLine("Du er nu ved "+name);
     Console.WriteLine();
 
@@ -206,4 +204,5 @@ class Space : Node {
 
   //  return (Space) (base.FollowEdge(direction));
   }
+
 }
