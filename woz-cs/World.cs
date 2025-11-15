@@ -49,7 +49,12 @@ class World {
     by.AddItem (new Material ("træ"));
     by.AddItem (new Material ("søm"));
     
-    byg_hus.AddItem (new Item ("medicin"));
+    byg_hus.AddItem (new Material ("medicin"));
+
+    vildnis_byggematerialer.AddItem (new Material ("træ"));
+    vildnis_byggematerialer.AddItem (new Material ("sten"));
+
+
 
 
 
