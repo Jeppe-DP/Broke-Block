@@ -57,7 +57,6 @@ class World {
 
 
 
-
     this.start = start;
   }
   
