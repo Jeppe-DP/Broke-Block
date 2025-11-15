@@ -50,6 +50,10 @@ class World {
     by.AddItem (new Item ("Træ"));
     by.AddItem (new Item ("Søm"));
     
+    byg_hus.AddItem (new Item ("medicin"));
+
+
+
     this.start = start;
   }
   

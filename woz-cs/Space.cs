@@ -27,7 +27,7 @@ class Space : Node {
 
     else if(location == "byg hus")
     {
-      description = "Tilbage ved husene møder du Aziz og Kofi, de hjælper dig med at reparere husene.Efterfølgende kommer du i snak med Aziz, so fortæller stolt at han er sygeplejerske hos det lokale hospital. Aziz fortæller sørgmodigt, at hospitalet har stærkt behov for ressourcer. Heldigvis har du fået medicin fra en af nabolandene. Vil du give medicinen et hospitalet, eller beholde medicinen for dig selv indtil videre?";
+      description = "Tilbage ved husene møder du Aziz og Kofi, de hjælper dig med at reparere husene.Efterfølgende kommer du i snak med Aziz, som fortæller stolt at han er sygeplejerske hos det lokale hospital. Aziz fortæller sørgmodigt, at hospitalet har stærkt behov for ressourcer. Heldigvis har du fået medicin fra en af nabolandene. Vil du give medicinen et hospitalet, eller beholde medicinen for dig selv indtil videre?";
     }
 
     else if (location=="feje")
@@ -101,9 +101,10 @@ class Space : Node {
     }
     else
     {
-      description = "tom";
+     description = "tom";
     }
-    return description;
+
+   return description;
   }
   public void Welcome () {
   //tilføjet mellemrum
