@@ -15,12 +15,14 @@ class Game {
     registry.Register("vælg", new CommandGo());
     registry.Register("help", new CommandHelp(registry));
     registry.Register("take", new CommandTake());
+    registry.Register("modtag", new CommandTake());
     registry.Register("show", new CommandShow());
+    registry.Register("vis", new CommandShow());
   }
   
   static void Main (string[] args) {
     Console.WriteLine("Velkommen til Broke-Broke!");
-    
+
     InitRegistry();
     context.GetCurrent().Welcome();
     
