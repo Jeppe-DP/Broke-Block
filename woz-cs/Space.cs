@@ -1,6 +1,6 @@
-/* Space class for modeling spaces (rooms, caves, ...)
- */
-class Space : Node {
+/* Space class for modeling spaces (rooms, caves, ...)*/
+
+public class Space : Node {
 
   public Space (String name) : base(name)
   {
@@ -202,7 +202,7 @@ class Space : Node {
       Console.WriteLine("⚠️ Dit valg førte til Game Over! Spil igen, og træf de rigtige beslutninger!⚠️");
       Console.ReadKey();
 
-      return Game.GetWorld().GetEntry();//sendes tilbage til start
+      return GameLauncher.GetWorld().GetEntry();//sendes tilbage til start
     }
     return next;
 

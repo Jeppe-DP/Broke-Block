@@ -1,7 +1,6 @@
-/* World class for modeling the entire in-game world
- */
+/*World class for modeling the entire in-game world*/
 
-class World {
+public class World {
   Space start;
   
   public World () {
@@ -60,7 +59,7 @@ class World {
     this.start = start;
   }
   
-  public Space GetEntry () {
+public Space GetEntry () {
     return start;
   }
 }
