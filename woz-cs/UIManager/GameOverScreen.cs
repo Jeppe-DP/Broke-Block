@@ -25,14 +25,6 @@
 //{
     //public static readonly string[] Art = {
       //@"
-
-
-
-
-
-
-
-
-      "
-    };
-}
+      //"
+    //};
+//}
