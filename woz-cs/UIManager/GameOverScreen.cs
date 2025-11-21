@@ -1,30 +1,42 @@
 //Print ASCII style Game Over screen.
 
-//public void WriteGameOver (string[] ascii){
+public class GameOverScreen{
+    private UIManager ui;
 
-    //Clear(); //clears console screen.
+    public static readonly string[] Art = {
+        @"",
+        @"",
+        @"",
+        @" ▄████   ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ",
+        @" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒",
+        @"▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒",
+        @"░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄",
+        @"░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒",
+        @"░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░",
+        @"░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░",
+        @"░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░",
+        @"░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░",
+        @"░",
+    };
+
+public GameOverScreen()
+{
+    ui = new UIManager(); //Genbruge UIManager
+
+}
+
+public void Show(){
+
+    Console.ForegroundColor = ConsoleColor.Red;
+    ui.WriteTitle(Art); //<-- shows ASCII text in console
+    Console.ResetColor();
+
+    Console.WriteLine("Tryk ENTER til at starte forfra...");
+    Console.ReadLine();
+}
+}
 
 
-    //foreach(string line in ascii){
 
-        //WriteCentered(line);
-    //}
-    //Console.WriteLine();
-//}
-//}
 
-// Print each line centered
-//foreach (string line in ascii)
-//{
-    //WriteCentered(line);
-    //Console.WriteLine();
-    //Console.ReadLine();
-//}
 
-//public static class GameOverScreen
-//{
-    //public static readonly string[] Art = {
-      //@"
-      //"
-    //};
-//}

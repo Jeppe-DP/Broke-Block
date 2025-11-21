@@ -1,45 +1,6 @@
  /* Main class for launching the game
  */
 
- public class Game
- {
-   private UIManager ui;
-
-   public Game()
-   {
-     ui = new UIManager(); // creates new UI object
-   }
-
-   public void Start()  // <-- added parentheses
-   {
-     // Add ASCII title
-     string[] title = {  // <-- fixed syntax
-       @"",
-       @"",
-       @"",
-       @"",
-       @" /$$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$$       /$$$$$$$  /$$        /$$$$$$   /$$$$$$  /$$   /$$",
-       @" | $$__  $$| $$__  $$ /$$__  $$| $$  /$$/| $$_____/      | $$__  $$| $$       /$$__  $$ /$$__  $$| $$  /$$/",
-       @" | $$  \ $$| $$  \ $$| $$  \ $$| $$ /$$/ | $$            | $$  \ $$| $$      | $$  \ $$| $$  \__/| $$ /$$/",
-       @" | $$$$$$$ | $$$$$$$/| $$  | $$| $$$$$/  | $$$$$         | $$$$$$$ | $$      | $$  | $$| $$      | $$$$$/",
-       @" | $$__  $$| $$__  $$| $$  | $$| $$  $$  | $$__/         | $$__  $$| $$      | $$  | $$| $$      | $$  $$",
-       @" | $$  \ $$| $$  \ $$| $$  | $$| $$\  $$ | $$            | $$  \ $$| $$      | $$  | $$| $$    $$| $$\  $$",
-       @" | $$$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$$$$$$$      | $$$$$$$/| $$$$$$$$|  $$$$$$/|  $$$$$$/| $$ \  $$",
-       @" |_______/ |__/  |__/ \______/ |__/  \__/|________/      |_______/ |________/ \______/  \______/ |__/  \__/",
-       @"",
-       @"",
-       @"                                   Velkommen til Broke Block.                                            "
-     };
-
-
-     ui.WriteTitle(title); //<-- shows ASCII text in console
-
-     Console.WriteLine("Tryk ENTER for at starte...");
-     Console.ReadLine();
-   }
-
-
- }
  public class GameLauncher
  {
    static World world = new World();
@@ -65,9 +26,9 @@
    {
      Console.WriteLine("Velkommen til Broke-Broke!");
 
-     // Laver objekt til screen.
-     Game game = new Game();
-     game.Start();   // <-- viser Ascii screen
+     UIManager ui = new UIManager(); //Call en instance
+     TitleScreen titleScreen = new TitleScreen();
+     titleScreen.Show();
 
      InitRegistry();
      context.GetCurrent().Welcome();

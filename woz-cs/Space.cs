@@ -195,12 +195,8 @@ public class Space : Node {
 
     if (badChocies.Contains(next.name))
     {
-
-      Console.WriteLine();
-      Console.WriteLine(next.GetDescription());
-      Console.WriteLine();
-      Console.WriteLine("⚠️ Dit valg førte til Game Over! Spil igen, og træf de rigtige beslutninger!⚠️");
-      Console.ReadKey();
+      GameOverScreen gameOver = new GameOverScreen();
+      gameOver.Show();
 
       return GameLauncher.GetWorld().GetEntry();//sendes tilbage til start
     }
