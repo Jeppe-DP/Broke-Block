@@ -202,7 +202,7 @@ class Space : Node {
       Console.WriteLine("⚠️ Dit valg førte til Game Over! Spil igen, og træf de rigtige beslutninger!⚠️");
       Console.ReadKey();
 
-      return Game.GetWorld().GetEntry();//sendes tilbage til start
+      return GameLauncher.GetWorld().GetEntry();//sendes tilbage til start
     }
     return next;
 
