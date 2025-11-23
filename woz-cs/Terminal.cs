@@ -3,7 +3,22 @@
 
 public class Terminal
 {
-  public void Run ()
+  public string? Input ()
+  {
+
+  }
+
+  public void Print (string output)
+  {
+
+  }
+
+  public void PrintWelcome ()
+  {
+
+  }
+
+  public void PrintGameOver ()
   {
 
   }
