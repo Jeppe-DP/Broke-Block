@@ -1,14 +1,14 @@
  /* Main class for launching the game
  */
 
- public class GameLauncher
- {
-   static World world = new World();
-   static Context context = new Context(world.GetEntry());
-   static ICommand fallback = new CommandUnknown();
-   static Registry registry = new Registry(context, fallback);
+public class GameLauncher{
 
-   private static void InitRegistry()
+   public static World world = new World();
+   public static Context context = new Context(world.GetEntry());
+   public static ICommand fallback = new CommandUnknown();
+   public static Registry registry = new Registry(context, fallback);
+
+public static void InitRegistry()
    {
      ICommand cmdExit = new CommandExit();
      registry.Register("exit", cmdExit);
@@ -20,35 +20,9 @@
      registry.Register("modtag", new CommandTake());
      registry.Register("show", new CommandShow());
      registry.Register("vis", new CommandShow());
-   }
+  }
 
-   static void Main(string[] args)
-   {
-     Console.WriteLine("Velkommen til Broke-Broke!");
-
-     UIManager ui = new UIManager(); //Call en instance
-     TitleScreen titleScreen = new TitleScreen();
-     titleScreen.Show();
-
-     InitRegistry();
-     context.GetCurrent().Welcome();
-
-     while (!context.IsDone())
-     {
-       Console.Write("> ");
-       string? line = Console.ReadLine();
-       if (line != null) registry.Dispatch(line);
-     }
-
-     Console.WriteLine("Game Over 😥");
-   }
-
-   // Make world more static
-   public static World GetWorld()
-   {
-     return world;
-   }
+public static World GetWorld(){
+  return world;
+}
  }
-
-
-
