@@ -15,10 +15,17 @@ class Program{
             Console.Write("> ");
             string? line = Console.ReadLine();
             if (line != null) GameLauncher.registry.Dispatch(line);
+
+        if (GameLauncher.context.GetCurrent().HasWon){
+            WinningScreen winScreen = new WinningScreen();
+            winScreen.Show();
+            break; // stop the game loop
         }
 
-        Console.WriteLine("Game Over 😥");
     }
+
+        Console.WriteLine("Game Over 😥");
+   }
 
     // Optional helper to access the world
 public static World GetWorld(){

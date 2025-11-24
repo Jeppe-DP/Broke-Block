@@ -2,6 +2,8 @@
 
 public class Space : Node {
 
+  public bool HasWon = false;
+
   public Space (String name) : base(name)
   {
   }
@@ -142,6 +144,7 @@ public class Space : Node {
       +"Broke-Block sælger mange varer til nabolandene og økonomien vokser.\n"
       +"Tillykke!Broke-Block er nu kommet ud af fattigdom.\n"
       +"Beboerne er glade og kan nu leve i et velfungerende samfund.";
+      HasWon = true; // mark win
     }
 
     else if (location == "behold veje")
@@ -157,6 +160,7 @@ public class Space : Node {
 
    return description;
   }
+
 
 
   public void Welcome () {
