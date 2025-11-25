@@ -8,10 +8,19 @@ class CommandGo : BaseCommand, ICommand {
   
   public void Execute (Context context, string command, string[] parameters) {
     if (parameters.Length == 0) {
-      Console.WriteLine("I don't seem to know where that is 🤔");
-      return;
+      return "I don't seem to know where that is 🤔";
     }
-    string destination = string.Join(" ", parameters);
     context.Transition(parameters[0]);
+
+    GameState newState = context.State;
+
+    if (newState == GameOver || newState == Won)
+    {
+      return context.GetCurrent().GetDescription();
+    }
+    else
+    {
+      return context.GetCurrent().Welcome();
+    }
   }
 }

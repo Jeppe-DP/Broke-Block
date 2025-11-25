@@ -3,10 +3,11 @@
 
 public class Context {
   Space current;
-  bool done = false;
+  GameState State { get; set; }
   
   public Context (Space node) {
     current = node;
+    State = Running;
   }
   
   public Space GetCurrent() {
@@ -15,21 +16,26 @@ public class Context {
   
   public void Transition (string direction) {
     Space next = current.FollowEdge(direction);
-    if (next==null) {
-      Console.WriteLine("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
-    } else {
-      current.Goodbye();
-      current = next;
-      current.Welcome();
+
+    UpdateState (next);
+  }
+
+  private void UpdateState (Space next)
+  {
+    next.GetName() switch
+    {
+      "start"         => State = GameOver,
+      "forbedre veje" => State = Won,
+      _               => State = Running
     }
   }
-  
-  public void MakeDone () {
-    done = true;
-  }
-  
-  public bool IsDone () {
-    return done;
+
+  public enum GameState
+  {
+    Running,
+    Done,
+    GameOver,
+    Won
   }
 }
 

@@ -1,35 +1,49 @@
-class Program{
-    static void Main(string[] args){
+class Program
+{
+  static void Main(string[] args)
+  {
+    UIManager ui = new UIManager(); // Call an instance
 
-        Console.WriteLine("Velkommen til Broke-Broke!");
+    Console.WriteLine("Velkommen til Broke-Broke!");
 
-        UIManager ui = new UIManager(); // Call an instance
-        TitleScreen titleScreen = new TitleScreen();
-        titleScreen.Show();
+    TitleScreen titleScreen = new TitleScreen();
+    titleScreen.Show();
 
-        GameLauncher.InitRegistry();
-        GameLauncher.context.GetCurrent().Welcome();
+    Game game = new Game ();
+    game.Context.GetCurrent().Welcome();
 
-        while (!GameLauncher.context.IsDone())
-        {
-            Console.Write("> ");
-            string? line = Console.ReadLine();
-            if (line != null) GameLauncher.registry.Dispatch(line);
+    Terminal terminal = new Terminal ();
 
-        if (GameLauncher.context.GetCurrent().HasWon){
-            WinningScreen winScreen = new WinningScreen();
-            winScreen.Show();
-            break; // stop the game loop
-        }
+    while (!context.State == Done)
+    {
+      terminal.Prompt ();
+      string? line = terminal.Input();
 
+      if (line != null) string response = game.Registry.Dispatch(line);
+
+      GameState state = game.Context.State;
+
+      switch (state)
+      {
+        case Done :
+          terminal.PrintClear (response);
+          terminal.Print ("Thanks for playing!");
+          break;
+        case Won :
+          terminal.Print (response);
+          WinningScreen winScreen = new WinningScreen();
+          winScreen.Show();
+          break;
+        case GameOver :
+          terminal.Print (response);
+          GameOverScreen gameOver = new GameOverScreen();
+          gameOver.Show();
+        default :
+          terminal.PrintClear (response);
+          break;
+      }
     }
 
-        Console.WriteLine("Game Over 😥");
-   }
-
-    // Optional helper to access the world
-public static World GetWorld(){
-
-        return GameLauncher.world;
-    }
+    Console.WriteLine("Game Over 😥");
+  }
 }
