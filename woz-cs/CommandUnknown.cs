@@ -2,7 +2,7 @@
  */
 
 class CommandUnknown : BaseCommand, ICommand {
-  public void Execute (Context context, string command, string[] parameters) {
-    Console.WriteLine("Woopsie, I don't understand '"+command+"' 😕");
+  public string Execute (Context context, string command, string[] parameters) {
+    return "Woopsie, I don't understand '" + command + "' 😕";
   }
 }

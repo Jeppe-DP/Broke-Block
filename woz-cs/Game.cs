@@ -3,16 +3,16 @@
 
 public class Game
 {
-  public World World { set; get; };
-  public Context Context { set; get; }
-  public ICommand Fallback { set; get; }
-  public Registry Registry { set; get; }
+  private static World world;
+  private Context context;
+  private ICommand fallback;
+  private Registry registry;
 
   public Game ()
   {
     world = new World ();
     context = new Context (world.GetEntry());
-    fallback = new CommandUnknown();
+    fallback = new CommandUnknown ();
     registry = new Registry (context, fallback);
 
     InitRegistry ();
@@ -32,7 +32,17 @@ public class Game
     registry.Register("vis", new CommandShow());
   }
 
-  public static World GetWorld()
+  public string ExecuteCmd (string input)
+  {
+    return registry.Dispatch(input);
+  }
+
+  public Context GetContext ()
+  {
+    return context;
+  }
+
+  public static World GetWorld ()
   {
     return world;
   }
