@@ -28,13 +28,14 @@ public WinningScreen()
 }
 
 public void Show(){
+    Console.ForegroundColor = ConsoleColor.Yellow;
     ui.WriteTitle(Win); //<-- shows ASCII text in console
+    Console.ResetColor();
 
     Console.WriteLine("🎉🎉 Broke-Block har bedre veje nu og lastbilerne kan transportere varer frem og tilbage.\n"
     +"Broke-Block sælger mange varer til nabolandene og økonomien vokser.\n"
     +"Tillykke!Broke-Block er nu kommet ud af fattigdom.\n"
     +"Beboerne er glade og kan nu leve i et velfungerende samfund");
-
     Console.ReadLine();
 
  }
