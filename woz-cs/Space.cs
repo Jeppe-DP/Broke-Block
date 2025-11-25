@@ -160,7 +160,6 @@ class Space : Node {
 
 
   public void Welcome () {
-    Console.Clear();
     Console.WriteLine("Du er nu ved "+name);
     Console.WriteLine();
 
@@ -174,13 +173,11 @@ class Space : Node {
     }
   }
 
-  public void Goodbye () {
-  }
-
   public override Space FollowEdge (string direction)
   {
- //followedge så spillet ikke slutter efter et dårlig valg
-    Space next = (Space)base.FollowEdge(direction);
+  //followedge så spillet ikke slutter efter et dårlig valg
+    Space next = (Space) base.FollowEdge(direction);
+
     //liste over de rum som afslutter spillet
     string[] badChocies  = {
       "mere tid i vildnis",
@@ -195,18 +192,9 @@ class Space : Node {
 
     if (badChocies.Contains(next.name))
     {
-
-      Console.WriteLine();
-      Console.WriteLine(next.GetDescription());
-      Console.WriteLine();
-      Console.WriteLine("⚠️ Dit valg førte til Game Over! Spil igen, og træf de rigtige beslutninger!⚠️");
-      Console.ReadKey();
-
-      return GameLauncher.GetWorld().GetEntry();//sendes tilbage til start
+      next = GameLauncher.GetWorld().GetEntry();//sendes tilbage til start
     }
+
     return next;
-
-  //  return (Space) (base.FollowEdge(direction));
   }
-
 }

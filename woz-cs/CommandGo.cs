@@ -2,16 +2,30 @@
  */
 
 class CommandGo : BaseCommand, ICommand {
-  public CommandGo () {
+  public CommandGo ()
+  {
     description = "Follow an exit";
   }
   
-  public void Execute (Context context, string command, string[] parameters) {
-    if (parameters.Length == 0) {
-      Console.WriteLine("I don't seem to know where that is 🤔");
-      return;
+  public string Execute (Context context, string command, string[] parameters) {
+    if (parameters.Length == 0)
+    {
+      return "I don't seem to know where that is 🤔";
     }
-    string destination = string.Join(" ", parameters);
+
     context.Transition(parameters[0]);
+
+    return (context.State == Running ? context.GetCurrent().Welcome() : context.GetCurrent().GetDescription());
+
+    GameState newState = context.State;
+
+    if (newState == GameOver || newState == Won)
+    {
+      return context.GetCurrent().GetDescription();
+    }
+    else
+    {
+      return context.GetCurrent().Welcome();
+    }
   }
 }
