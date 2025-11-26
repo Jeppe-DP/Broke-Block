@@ -3,22 +3,24 @@
 
 public class Terminal
 {
-  private UIManager ui;
+  //private UIManager ui;
 
   public Terminal ()
   {
-    ui = new UIManager ();
+    //ui = new UIManager ();
   }
 
   public string GetInput ()
   {
-    string input = null;
+    string? input = null;
 
     while (input == null)
     {
       Console.Write (">");
       input = Console.ReadLine ();
     }
+
+    return input;
   }
 
   public void Print (string output)
@@ -33,21 +35,21 @@ public class Terminal
 
   public void PrintWelcome ()
   {
-    Console.WriteLine("Velkommen til Broke-Broke!");
+    Print ("Velkommen til Broke-Broke!");
 
     TitleScreen titleScreen = new TitleScreen();
     titleScreen.Show();
   }
 
-  public void PrintGameOver ()
+  public void PrintGameOver (string description)
   {
-    GameOverScreen gameOver = new GameOverScreen();
+    GameOverScreen gameOver = new GameOverScreen(description);
     gameOver.Show();
   }
 
-  public void PrintWinScreen ()
+  public void PrintWinScreen (string description)
   {
-    WinningScreen winScreen = new WinningScreen();
+    WinningScreen winScreen = new WinningScreen(description);
     winScreen.Show();
   }
 }

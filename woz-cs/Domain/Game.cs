@@ -36,6 +36,18 @@ public class Game
     return registry.Dispatch(input);
   }
 
+  public string RestartGame ()
+  {
+    context.State = GameState.Running;
+
+    return context.GetCurrent().Welcome ();
+  }
+
+  public void EndGame ()
+  {
+    context.State = GameState.Done;
+  }
+
   public Context GetContext ()
   {
     return context;

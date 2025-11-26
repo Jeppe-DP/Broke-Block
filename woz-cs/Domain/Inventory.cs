@@ -16,7 +16,7 @@ public class Inventory
 
     for (int i = 0; i < inventory.Count; i++)
     {
-      result += item.ToString () + (i == inventory.Count - 1 ? "" : "\n");
+      result += inventory[i].ToString () + (i == inventory.Count - 1 ? "" : "\n");
     }
 
     return result;

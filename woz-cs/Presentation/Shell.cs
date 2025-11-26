@@ -15,29 +15,35 @@ public class Shell
   public void Run ()
   {
     terminal.PrintWelcome ();
-    game.GetContext.GetCurrent().Welcome();
+    terminal.Clear ();
+    terminal.Print(game.GetContext().GetCurrent().Welcome());
 
-    do
+    GameState state = game.GetContext().State;
+
+    while (state != GameState.Done)
     {
-      string line = terminal.GetInput();
+      string line = terminal.GetInput ();
       string response = game.ExecuteCmd (line);
 
-      GameState state = game.GetContext().State;
+      state = game.GetContext().State;
 
       terminal.Clear ();
 
       switch (state)
       {
-        case GameOver :
-          terminal.PrintGameOver ();
+        case GameState.GameOver:
+          terminal.PrintGameOver (response);
+          terminal.Clear ();
+          terminal.Print (game.RestartGame ());
           break;
-        case Won:
-          terminal.PrintWinScreen ();
+        case GameState.Won:
+          terminal.PrintWinScreen (response);
+          game.EndGame ();
+          break;
+        default:
+          terminal.Print (response);
           break;
       }
-
-      terminal.Print (response);
-
-    } while (state != Done);
+    }
   }
 }

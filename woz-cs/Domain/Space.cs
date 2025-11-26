@@ -2,8 +2,6 @@
 
 public class Space : Node {
 
-  public bool HasWon = false;
-
   public Space (String name) : base(name)
   {
   }
@@ -144,7 +142,6 @@ public class Space : Node {
       +"Broke-Block sælger mange varer til nabolandene og økonomien vokser.\n"
       +"Tillykke!Broke-Block er nu kommet ud af fattigdom.\n"
       +"Beboerne er glade og kan nu leve i et velfungerende samfund.";
-      HasWon = true; // mark win
     }
 
     else if (location == "behold veje")
@@ -162,18 +159,18 @@ public class Space : Node {
   }
 
   public string Welcome () {
-    string result;
+    string result = "";
 
     HashSet<string> exits = edges.Keys.ToHashSet();
 
-    result += "Du er nu ved " + name + "\n";
+    result += "Du er nu ved " + name + "\n\n";
     result += GetDescription ();
-    result += "\n" + "Nuværende udgange er:";
+    result += "\n\n" + "Nuværende udgange er:";
 
 
     foreach (String exit in exits)
     {
-      result += " - " + exit;
+      result += "\n - " + exit;
     }
 
     return result;
@@ -183,25 +180,6 @@ public class Space : Node {
   {
  //followedge så spillet ikke slutter efter et dårlig valg
     Space next = (Space) base.FollowEdge(direction);
-    //liste over de rum som afslutter spillet
-    string[] badChocies  = {
-      "mere tid i vildnis",
-      "feje",
-      "sælg medicin",
-      "byg bar",
-      "ignorere floden",
-      "forsæt uden samarbejde",
-      "behold råvarer",
-      "behold veje"
-    };
-
-    if (badChocies.Contains(next.name))
-    {
-      GameOverScreen gameOver = new GameOverScreen();
-      gameOver.Show();
-
-      next = GameLauncher.GetWorld().GetEntry(); //sendes tilbage til start
-    }
 
     return next;
   }
