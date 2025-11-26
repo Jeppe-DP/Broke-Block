@@ -10,11 +10,15 @@ public class Inventory
     inventory.Add (item);
   }
 
-  public static void PrintInventory ()
+  public static string PrintInventory ()
   {
-    foreach (Item item in inventory)
+    string result = "";
+
+    for (int i = 0; i < inventory.Count; i++)
     {
-      Console.WriteLine (item);
+      result += item.ToString () + (i == inventory.Count - 1 ? "" : "\n");
     }
+
+    return result;
   }
 }

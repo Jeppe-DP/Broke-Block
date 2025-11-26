@@ -3,14 +3,13 @@
 
 public class Game
 {
-  private static World world;
+  private static World world = new World ();
   private Context context;
   private ICommand fallback;
   private Registry registry;
 
   public Game ()
   {
-    world = new World ();
     context = new Context (world.GetEntry());
     fallback = new CommandUnknown ();
     registry = new Registry (context, fallback);
