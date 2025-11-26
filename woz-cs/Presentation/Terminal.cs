@@ -12,15 +12,13 @@ public class Terminal
 
   public string GetInput ()
   {
-    string? input = null;
+    string input = null;
 
     while (input == null)
     {
       Console.Write (">");
       input = Console.ReadLine ();
     }
-
-    return input;
   }
 
   public void Print (string output)
