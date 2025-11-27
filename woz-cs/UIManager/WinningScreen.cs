@@ -38,6 +38,10 @@ public void Show(){
     +"Beboerne er glade og kan nu leve i et velfungerende samfund");
     Console.ReadLine();
 
+    //starter quizzen
+    Quiz quiz = new Quiz ();
+    quiz.Start();
+
  }
 }
 
