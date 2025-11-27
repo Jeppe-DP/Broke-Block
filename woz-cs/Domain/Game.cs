@@ -1,7 +1,7 @@
  /* Main class for launching the game
  */
 
-public class Game
+public class Game : IGame
 {
   public static GameState State { get; set; }
 
