@@ -33,9 +33,6 @@ public void Show(){
     ui.WriteTitle(Win); //<-- shows ASCII text in console
 
     Console.WriteLine(description);
-
-    Console.ReadLine();
-
  }
 }
 

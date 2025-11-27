@@ -33,6 +33,7 @@ public void Show(){
     Console.ResetColor();
 
     Console.WriteLine (description);
+    Console.WriteLine ();
     Console.WriteLine("Tryk ENTER til at starte forfra...");
     Console.ReadLine();
 }

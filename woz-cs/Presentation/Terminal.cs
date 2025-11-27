@@ -3,13 +3,6 @@
 
 public class Terminal
 {
-  //private UIManager ui;
-
-  public Terminal ()
-  {
-    //ui = new UIManager ();
-  }
-
   public string GetInput ()
   {
     string? input = null;
@@ -31,6 +24,17 @@ public class Terminal
   public void Clear ()
   {
     Console.Clear ();
+  }
+
+  public string CheckClear (string str)
+  {
+    if (str[0] == '*')
+    {
+      Clear ();
+      return str.Substring (1);
+    }
+
+    return str;
   }
 
   public void PrintWelcome ()

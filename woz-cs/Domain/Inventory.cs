@@ -12,7 +12,12 @@ public class Inventory
 
   public static string PrintInventory ()
   {
-    string result = "";
+    if (inventory.Count == 0)
+    {
+      return "Inventory er tom.";
+    }
+
+    string result = "Inventory:\n\n";
 
     for (int i = 0; i < inventory.Count; i++)
     {

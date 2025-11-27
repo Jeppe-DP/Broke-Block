@@ -18,16 +18,15 @@ public class Shell
     terminal.Clear ();
     terminal.Print(game.GetContext().GetCurrent().Welcome());
 
-    GameState state = game.GetContext().State;
+    GameState state = Game.State;
 
     while (state != GameState.Done)
     {
       string line = terminal.GetInput ();
       string response = game.ExecuteCmd (line);
+      response = terminal.CheckClear (response);
 
-      state = game.GetContext().State;
-
-      terminal.Clear ();
+      state = Game.State;
 
       switch (state)
       {
@@ -38,7 +37,7 @@ public class Shell
           break;
         case GameState.Won:
           terminal.PrintWinScreen (response);
-          game.EndGame ();
+          state = game.EndGame ();
           break;
         default:
           terminal.Print (response);

@@ -3,7 +3,6 @@
 
 public class Context
 {
-  public GameState State { get; set; }
   private Space current;
   //liste over de rum som afslutter spillet
   private string[] badChoices  = {
@@ -16,11 +15,10 @@ public class Context
       "behold råvarer",
       "behold veje"
     };
-  
+
   public Context (Space node)
   {
     current = node;
-    State = GameState.Running;
   }
   
   public Space GetCurrent()
@@ -37,7 +35,7 @@ public class Context
       string description = next.GetDescription();
       current = Game.GetWorld().GetEntry();
 
-      State = GameState.GameOver;
+      Game.State = GameState.GameOver;
 
       return description;
     }
@@ -46,7 +44,7 @@ public class Context
       string description = next.GetDescription();
       current = next;
 
-      State = GameState.Won;
+      Game.State = GameState.Won;
 
       return description;
     }

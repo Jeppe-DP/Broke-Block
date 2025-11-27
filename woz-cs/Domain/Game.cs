@@ -3,6 +3,8 @@
 
 public class Game
 {
+  public static GameState State { get; set; }
+
   private static World world = new World ();
   private Context context;
   private ICommand fallback;
@@ -10,6 +12,8 @@ public class Game
 
   public Game ()
   {
+    State = GameState.Running;
+
     context = new Context (world.GetEntry());
     fallback = new CommandUnknown ();
     registry = new Registry (context, fallback);
@@ -38,14 +42,16 @@ public class Game
 
   public string RestartGame ()
   {
-    context.State = GameState.Running;
+    State = GameState.Running;
 
     return context.GetCurrent().Welcome ();
   }
 
-  public void EndGame ()
+  public GameState EndGame ()
   {
-    context.State = GameState.Done;
+    State = GameState.Done;
+
+    return State;
   }
 
   public Context GetContext ()
@@ -57,4 +63,13 @@ public class Game
   {
     return world;
   }
+}
+
+// Repræsenterer mulige spiltilstande
+public enum GameState
+{
+  Running,
+  Done,
+  GameOver,
+  Won
 }

@@ -21,12 +21,10 @@ class CommandHelp : BaseCommand, ICommand {
     }
     
     // present list of commands
-    string result = "Commands:";
+    string result = "Commands:\n\n";
     foreach (String commandName in commandNames) {
       string description = registry.GetCommand(commandName).GetDescription();
-      result += commandName;
-      result += " - {0,-"+max+"} ";
-      result += description;
+      result += commandName + ": " + description + "\n";
     }
 
     return result;
