@@ -1,7 +1,6 @@
-/* World class for modeling the entire in-game world
- */
+/*World class for modeling the entire in-game world*/
 
-class World {
+public class World {
   Space start;
   
   public World () {
@@ -24,7 +23,6 @@ class World {
     Space forbedre_veje              = new Space ("forbedre veje");
     Space behold_veje                = new Space ("behold veje");
 
-    
     start.AddEdge("vildnis", vildnis_byggematerialer);
     start.AddEdge("by", by);
     by.AddEdge("feje", feje);
@@ -43,11 +41,25 @@ class World {
     byg_dæmninger.AddEdge("behold råvarer", behold_råvarer);
     sælge_råvarer.AddEdge("forbedre veje", forbedre_veje);
     sælge_råvarer.AddEdge("behold veje", behold_veje);
+
+    by.AddItem (new Tool ("hammer"));
+    by.AddItem (new Material ("søm"));
+    by.AddItem (new Material ("søm"));
+    by.AddItem (new Material ("træ"));
+    by.AddItem (new Material ("søm"));
     
+    byg_hus.AddItem (new Material ("medicin"));
+
+    vildnis_byggematerialer.AddItem (new Material ("træ"));
+    vildnis_byggematerialer.AddItem (new Material ("sten"));
+
+
+
+
     this.start = start;
   }
   
-  public Space GetEntry () {
+public Space GetEntry () {
     return start;
   }
 }
