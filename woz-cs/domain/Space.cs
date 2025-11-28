@@ -160,7 +160,6 @@ public class Space : Node {
         + "💰 Handel = Penge: God infrastruktur (veje, havne, internet) er din gratisbillet til at handle memes, ressourcepakker og alt andet med hele verden. Mere handel = færre fattigdomme.\n"
         + "🚗 Pendling = Job: En god vej betyder, at du faktisk kan komme til dit drømme-job i den der store, fjerne by, i stedet for at sidde fast i ingenting. Det kalder vi en karriere-vej (undskyld).\n"
         + "Kort sagt: Ingen gode veje = ingen penge. Det er simpelt matematik, folkens";
-        HasWon = true; // markerer "win"
         break;
 
       case("behold veje"):
