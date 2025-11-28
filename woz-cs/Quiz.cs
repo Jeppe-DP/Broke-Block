@@ -98,7 +98,7 @@ public class Quiz
             int input;
             while (!int.TryParse(Console.ReadLine(), out input) || input < 1 || input > q.Answers.Length)
             {
-                Console.Write("Ugyldigt svar - prøv igen (1-4): ");
+                Console.Write("Ugyldigt svar - prøv med tal fra 1-4: ");
             }
 
             // Tjek korrekt svar
@@ -114,7 +114,7 @@ public class Quiz
         }
 
         // Afslut quiz
-        Console.WriteLine($"🎯 Du fik {score} ud af {questions.Count} rigtige!");
+        Console.WriteLine($"🎯 DIN SCORE: {score} ud af {questions.Count} rigtige!");
         Console.WriteLine("Tak for at spille! Tryk ENTER for at afslutte.");
         Console.ReadLine();
     }
