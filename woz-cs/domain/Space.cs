@@ -2,8 +2,6 @@
 
 public class Space : Node {
 
-  public bool HasWon = false;
-
   public Space (String name) : base(name)
   {
   }
@@ -178,50 +176,29 @@ public class Space : Node {
    return description;
   }
 
-  public void Welcome () {
-    Console.Clear();
-    Console.WriteLine("Du er nu ved "+name);
-    Console.WriteLine();
+  public string Welcome () {
+    string result = "";
 
-    Console.WriteLine(GetDescription());
     HashSet<string> exits = edges.Keys.ToHashSet();
-    Console.WriteLine();
-    Console.WriteLine("Nuværende udgange er:");
+
+    result += "Du er nu ved " + name + "\n\n";
+    result += GetDescription ();
+    result += "\n\n" + "Nuværende udgange er:";
+
+
     foreach (String exit in exits)
     {
-      Console.WriteLine(" - "+exit);
+      result += "\n - " + exit;
     }
-  }
 
-  public void Goodbye () {
+    return result;
   }
 
   public override Space FollowEdge (string direction)
   {
  //followedge så spillet ikke slutter efter et dårlig valg
-    Space next = (Space)base.FollowEdge(direction);
-    //liste over de rum som afslutter spillet
-    string[] badChocies  = {
-      "mere tid i vildnis",
-      "feje",
-      "sælg medicin",
-      "byg bar",
-      "ignorere floden",
-      "forsæt uden samarbejde",
-      "behold råvarer",
-      "behold veje"
-    };
+    Space next = (Space) base.FollowEdge(direction);
 
-    if (badChocies.Contains(next.name))
-    {
-      GameOverScreen gameOver = new GameOverScreen();
-      gameOver.Show();
-
-      return GameLauncher.GetWorld().GetEntry();//sendes tilbage til start
-    }
     return next;
-
-  //  return (Space) (base.FollowEdge(direction));
   }
-
 }
