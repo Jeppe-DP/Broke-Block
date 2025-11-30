@@ -9,7 +9,7 @@ class CommandHelp : BaseCommand, ICommand {
     this.description = "Display a help message";
   }
   
-  public void Execute (Context context, string command, string[] parameters) {
+  public string Execute (Context context, string command, string[] parameters) {
     string[] commandNames = registry.GetCommandNames();
     Array.Sort(commandNames);
     
@@ -21,10 +21,12 @@ class CommandHelp : BaseCommand, ICommand {
     }
     
     // present list of commands
-    Console.WriteLine("Commands:");
+    string result = "Commands:\n\n";
     foreach (String commandName in commandNames) {
       string description = registry.GetCommand(commandName).GetDescription();
-      Console.WriteLine(" - {0,-"+max+"} "+description, commandName);
+      result += commandName + ": " + description + "\n";
     }
+
+    return result;
   }
 }

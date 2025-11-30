@@ -8,8 +8,8 @@ class CommandShow : BaseCommand, ICommand
     description = "Print inventory.";
   }
 
-  public void Execute (Context context, string command, string[] parameters)
+  public string Execute (Context context, string command, string[] parameters)
   {
-    Inventory.PrintInventory ();
+    return Inventory.PrintInventory ();
   }
 }
