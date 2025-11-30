@@ -1,4 +1,4 @@
-//UserInterface til at display title screen gennem Game.cs
+//UserInterface til at display screen gennem Game.cs
 
 public class UIManager
 {
