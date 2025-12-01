@@ -196,24 +196,7 @@ public class Space : Node {
 
   public override Space FollowEdge (string direction)
   {
- //followedge så spillet ikke slutter efter et dårlig valg
     Space next = (Space) base.FollowEdge(direction);
-    //liste over de rum som afslutter spillet
-    string[] badChoices  = {
-      "mere tid i vildnis",
-      "feje",
-      "sælg medicin",
-      "byg bar",
-      "ignorere floden",
-      "forsæt uden samarbejde",
-      "behold råvarer",
-      "behold veje"
-    };
-
-    if (badChoices.Contains (next.GetName ()))
-    {
-      return Game.GetWorld().GetEntry(); //spilleren sendes tilbage til start
-    }
 
     return next;
   }

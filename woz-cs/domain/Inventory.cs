@@ -36,4 +36,14 @@ public class Inventory
 
     return false;
   }
+
+  public static bool Contains (string[] names)
+  {
+    foreach (string name in names)
+    {
+      if (!Contains (name)) return false;
+    }
+
+    return true;
+  }
 }
