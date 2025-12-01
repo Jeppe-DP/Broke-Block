@@ -4,17 +4,6 @@
 public class Context
 {
   private Space current;
-  //liste over de rum som afslutter spillet
-  private string[] badChoices  = {
-      "mere tid i vildnis",
-      "feje",
-      "sælg medicin",
-      "byg bar",
-      "ignorere floden",
-      "forsæt uden samarbejde",
-      "behold råvarer",
-      "behold veje"
-    };
 
   public Context (Space node)
   {
@@ -28,30 +17,36 @@ public class Context
   
   public string Transition (string direction)
   {
-    Space next = current.FollowEdge(direction);
+    Space from = current;
+    current = current.FollowEdge(direction);
 
-    if (badChoices.Contains (next.GetName ()))
+    string description = "";
+
+    if (current.GetName().Equals ("start"))
     {
-      string description = next.GetDescription();
-      current = Game.GetWorld().GetEntry();
-
+      description = from.GetDescription();
       Game.State = GameState.GameOver;
-
-      return description;
     }
-    else if (next.GetName ().Equals ("forbedre veje"))
+    else if (current.GetName().Equals ("forbedre veje"))
     {
-      string description = next.GetDescription();
-      current = next;
-
+      description = current.GetDescription();
       Game.State = GameState.Won;
-
-      return description;
-    }
-    else
+    } else if (from.GetName().Equals("by") && current.GetName().Equals("byg hus"))
     {
-      current = next;
-      return current.Welcome();
+      if (!Inventory.Contains ("hammer"))
+      {
+        description = "Du glemte at samle hammeren op!";
+        Game.State = GameState.GameOver;
+        current = Game.GetWorld().GetEntry();
+      } else
+      {
+        description = current.Welcome ();
+      }
+    } else
+    {
+      description = current.Welcome ();
     }
+
+    return description;
   }
 }

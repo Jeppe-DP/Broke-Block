@@ -24,8 +24,9 @@ public class Space : Node {
         description = "Du vælger at blive i landsbyen.\n"
         +"På vej hen til rådhuset går du forbi en lokal nabolag.\n"
         +"Husene har stærkt brug for hjælp, da byggningerne er forfalden.\n"
-        +"En lokal beboer, Kofi går op til dig med to forskellige ting.\n"
-        +"Vil du vælge om feje støv og sten væk fra vejene? Eller modtag hammer, søm og træ til at bygge?";
+        +"En lokal beboer, Kofi går op til dig med forskellige ting.\n"
+        +"Du har mulighed for at tage en hammer, noget træ og nogle søm.\n"
+        +"Vil du vælge om feje støv og sten væk fra vejene? Eller vil du tage materialerne og reparere husene?";
         break;
 
       case("vildnis"):
@@ -197,6 +198,22 @@ public class Space : Node {
   {
  //followedge så spillet ikke slutter efter et dårlig valg
     Space next = (Space) base.FollowEdge(direction);
+    //liste over de rum som afslutter spillet
+    string[] badChoices  = {
+      "mere tid i vildnis",
+      "feje",
+      "sælg medicin",
+      "byg bar",
+      "ignorere floden",
+      "forsæt uden samarbejde",
+      "behold råvarer",
+      "behold veje"
+    };
+
+    if (badChoices.Contains (next.GetName ()))
+    {
+      return Game.GetWorld().GetEntry(); //spilleren sendes tilbage til start
+    }
 
     return next;
   }

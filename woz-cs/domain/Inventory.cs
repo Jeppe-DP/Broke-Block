@@ -26,4 +26,14 @@ public class Inventory
 
     return result;
   }
+
+  public static bool Contains (string name)
+  {
+    foreach (Item item in inventory)
+    {
+      if (item.Name.Equals (name)) return true;
+    }
+
+    return false;
+  }
 }
