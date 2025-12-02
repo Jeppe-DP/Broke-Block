@@ -34,7 +34,13 @@ public class Context
 
     string description = "";
 
-    if (badChoices.Contains(current.GetName()))
+    if (!current.TransitionAllowed())
+    {
+      description = current.Error;
+      Game.State = GameState.GameOver;
+      current = Game.GetWorld().GetEntry();
+    }
+    else if (badChoices.Contains(current.GetName()))
     {
       description = current.GetDescription();
       Game.State = GameState.GameOver;
@@ -45,18 +51,8 @@ public class Context
     {
       description = current.GetDescription();
       Game.State = GameState.Won;
-    } else if (from.GetName().Equals("by") && current.GetName().Equals("byg hus"))
-    {
-      if (!Inventory.Contains (new string[] { "hammer", "træ", "søm" }))
-      {
-        description = "Du havde ikke de fornødne materialer til at reparere husene!";
-        Game.State = GameState.GameOver;
-        current = Game.GetWorld().GetEntry();
-      } else
-      {
-        description = current.Welcome ();
-      }
-    } else
+    }
+    else
     {
       description = current.Welcome ();
     }

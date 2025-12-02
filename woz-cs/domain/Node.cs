@@ -2,9 +2,12 @@
  */
 
 public class Node {
+  public string Error { get ; set; }
+
   protected string name;
   protected Dictionary<string, Node> edges = new Dictionary<string, Node>();
   protected List<Item> items = new List<Item>();
+  protected List<Item> requiredItems = new List<Item>();
   
   public Node (string name) {
     this.name = name;
@@ -27,6 +30,11 @@ public class Node {
     items.Add (item);
   }
 
+  public void AddRequiredItem (Item item)
+  {
+    requiredItems.Add (item);
+  }
+
   public Item? PickUpItem (string name)
   {
     foreach (Item item in items)
@@ -41,6 +49,16 @@ public class Node {
     }
 
     return null;
+  }
+
+  public bool TransitionAllowed ()
+  {
+    foreach (Item item in requiredItems)
+    {
+      if (!Inventory.Contains (item.Name)) return false;
+    }
+
+    return true;
   }
 }
 

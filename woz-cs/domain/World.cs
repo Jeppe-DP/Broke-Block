@@ -42,14 +42,38 @@ public class World {
     sælge_råvarer.AddEdge("forbedre veje", forbedre_veje);
     sælge_råvarer.AddEdge("behold veje", behold_veje);
 
-    by.AddItem (new Tool ("hammer"));
-    by.AddItem (new Material ("træ"));
-    by.AddItem (new Material ("søm"));
-    
-    byg_hus.AddItem (new Material ("medicin"));
+    Item hammer = new Item ("hammer");
+    Item søm = new Item ("søm");
+    Item træ = new Item ("træ");
 
-    vildnis_byggematerialer.AddItem (new Material ("træ"));
-    vildnis_byggematerialer.AddItem (new Material ("sten"));
+    by.AddItem (hammer);
+    by.AddItem (søm);
+    by.AddItem (træ);
+
+    byg_hus.AddRequiredItem (hammer);
+    byg_hus.AddRequiredItem (søm);
+    byg_hus.AddRequiredItem (træ);
+
+    byg_hus.Error = "Du havde ikke de fornødne materialer til at reparere husene!";
+
+    Item medicin = new Item ("medicin");
+    
+    byg_hus.AddItem (medicin);
+    hospital.AddRequiredItem (medicin);
+
+    hospital.Error = "Du har ingen medicin";
+
+    Item sten = new Item ("sten");
+
+    vildnis_byggematerialer.AddItem (sten);
+    vildnis_byggematerialer.AddItem (træ);
+
+    Item råvarer = new Item ("råvarer");
+
+    samarbejde_med_bønder.AddItem (råvarer);
+    byg_dæmninger.AddRequiredItem (råvarer);
+
+    byg_dæmninger.Error = "Du samlede ikke råvarerne op!";
 
     this.start = start;
   }
