@@ -1,66 +1,63 @@
 /*World class for modeling the entire in-game world*/
 
-public class World {
-  Space start;
-  
-  public World () {
-    Space start                      = new Space("start");
-    Space vildnis_byggematerialer    = new Space("vildnis");
-    Space by                         = new Space("by");
-    Space feje                       = new Space("feje");
-    Space byg_hus                    = new Space("byg hus");
-    Space mere_tid_i_vildnis         = new Space("mere tid i vildnis");
-    Space hospital                   = new Space ("ressourcer til hospital");
-    Space sælg_medicin               = new Space ("sælg medicin");
-    Space skole                      = new Space ("byg skole");
-    Space bar                        = new Space ("byg bar");
-    Space samarbejde_med_bønder      = new Space ("samarbejde med bønder");
-    Space fortsæt_uden_samarbejde    = new Space ("fortsæt uden samarbejde");
-    Space byg_dæmninger              = new Space ("byg dæmninger");
-    Space ignorere_floden            = new Space ("ignorere floden");
-    Space sælge_råvarer              = new Space ("sælge råvarer");
-    Space behold_råvarer             = new Space ("behold råvarer");
-    Space forbedre_veje              = new Space ("forbedre veje");
-    Space behold_veje                = new Space ("behold veje");
 
-    start.AddEdge("vildnis", vildnis_byggematerialer);
-    start.AddEdge("by", by);
+public class World {
+  private Space start;
+
+  public World() {
+    // Declare spaces as local variables
+    Space startRoom = new Space("start");
+    Space vildnisByggematerialer = new Space("vildnis");
+    Space by = new Space("by");
+    Space feje = new Space("feje");
+    Space bygHus = new Space("byg hus");
+    Space mereTidIVildnis = new Space("mere tid i vildnis");
+    Space hospital = new Space("ressourcer til hospital");
+    Space sælgMedicin = new Space("sælg medicin");
+    Space skole = new Space("byg skole");
+    Space bar = new Space("byg bar");
+    Space samarbejdeMedBønder = new Space("samarbejde med bønder");
+    Space fortsætUdenSamarbejde = new Space("fortsæt uden samarbejde");
+    Space bygDæmninger = new Space("byg dæmninger");
+    Space ignorereFloden = new Space("ignorere floden");
+    Space sælgeRåvarer = new Space("sælge råvarer");
+    Space beholdRåvarer = new Space("behold råvarer");
+    Space forbedreVeje = new Space("forbedre veje");
+    Space beholdVeje = new Space("behold veje");
+
+    // Add edges
+    startRoom.AddEdge("vildnis", vildnisByggematerialer);
+    startRoom.AddEdge("by", by);
     by.AddEdge("feje", feje);
-    by.AddEdge("byg hus", byg_hus);
-    vildnis_byggematerialer.AddEdge("byg hus", byg_hus);
-    vildnis_byggematerialer.AddEdge("mere tid i vildnis", mere_tid_i_vildnis);
-    byg_hus.AddEdge("ressourcer til hospital", hospital);
-    byg_hus.AddEdge("sælg medicin", sælg_medicin);
+    by.AddEdge("byg hus", bygHus);
+    vildnisByggematerialer.AddEdge("byg hus", bygHus);
+    vildnisByggematerialer.AddEdge("mere tid i vildnis", mereTidIVildnis);
+    bygHus.AddEdge("ressourcer til hospital", hospital);
+    bygHus.AddEdge("sælg medicin", sælgMedicin);
     hospital.AddEdge("byg skole", skole);
     hospital.AddEdge("byg bar", bar);
-    skole.AddEdge("samarbejde med bønder", samarbejde_med_bønder);
-    skole.AddEdge("fortsæt uden samarbejde", fortsæt_uden_samarbejde);
-    samarbejde_med_bønder.AddEdge("byg dæmninger", byg_dæmninger);
-    samarbejde_med_bønder.AddEdge("ignorere floden", ignorere_floden);
-    byg_dæmninger.AddEdge("sælge råvarer", sælge_råvarer);
-    byg_dæmninger.AddEdge("behold råvarer", behold_råvarer);
-    sælge_råvarer.AddEdge("forbedre veje", forbedre_veje);
-    sælge_råvarer.AddEdge("behold veje", behold_veje);
+    skole.AddEdge("samarbejde med bønder", samarbejdeMedBønder);
+    skole.AddEdge("fortsæt uden samarbejde", fortsætUdenSamarbejde);
+    samarbejdeMedBønder.AddEdge("byg dæmninger", bygDæmninger);
+    samarbejdeMedBønder.AddEdge("ignorere floden", ignorereFloden);
+    bygDæmninger.AddEdge("sælge råvarer", sælgeRåvarer);
+    bygDæmninger.AddEdge("behold råvarer", beholdRåvarer);
+    sælgeRåvarer.AddEdge("forbedre veje", forbedreVeje);
+    sælgeRåvarer.AddEdge("behold veje", beholdVeje);
 
-    by.AddItem (new Tool ("hammer"));
-    by.AddItem (new Material ("søm"));
-    by.AddItem (new Material ("søm"));
-    by.AddItem (new Material ("træ"));
-    by.AddItem (new Material ("søm"));
-    
-    byg_hus.AddItem (new Material ("medicin"));
+    // Add items
+    by.AddItem(new Tool("hammer"));
+    by.AddItem(new Material("søm"));
+    by.AddItem(new Material("træ"));
+    bygHus.AddItem(new Material("medicin"));
+    vildnisByggematerialer.AddItem(new Material("træ"));
+    vildnisByggematerialer.AddItem(new Material("sten"));
 
-    vildnis_byggematerialer.AddItem (new Material ("træ"));
-    vildnis_byggematerialer.AddItem (new Material ("sten"));
-
-
-
-
-    this.start = start;
+    // Assign to class field
+    this.start = startRoom;
   }
-  
-public Space GetEntry () {
+
+  public Space GetEntry() {
     return start;
   }
 }
-

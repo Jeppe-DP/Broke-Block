@@ -3,7 +3,11 @@
 
 public class Context
 {
-  private Space current;
+  public Space Current { get; set; }
+
+  public World World { get; } // Referer til "world" så spilleren kan komme over til sit næste choice.
+
+
   //liste over de rum som afslutter spillet
   private string[] badChoices  = {
       "mere tid i vildnis",
@@ -16,24 +20,25 @@ public class Context
       "behold veje"
     };
 
-  public Context (Space node)
+  public Context (Space startroom, World world)
   {
-    current = node;
+    Current = startroom;
+    World = world;
   }
-  
-  public Space GetCurrent()
+
+  public Space GetCurrent() //tilføjet efter at choice blev tilføjet i space.cs
   {
-    return current;
+    return Current;
   }
   
   public string Transition (string direction)
   {
-    Space next = current.FollowEdge(direction);
+    Space next = Current.FollowEdge(direction);
 
     if (badChoices.Contains (next.GetName ()))
     {
       string description = next.GetDescription();
-      current = Game.GetWorld().GetEntry();
+      Current = Game.GetWorld().GetEntry();
 
       Game.State = GameState.GameOver;
 
@@ -42,7 +47,7 @@ public class Context
     else if (next.GetName ().Equals ("forbedre veje"))
     {
       string description = next.GetDescription();
-      current = next;
+      Current = next;
 
       Game.State = GameState.Won;
 
@@ -50,8 +55,8 @@ public class Context
     }
     else
     {
-      current = next;
-      return current.Welcome();
+      Current = next;
+      return Current.Welcome();
     }
   }
 }

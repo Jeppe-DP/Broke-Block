@@ -30,5 +30,24 @@ public void WriteTitle (string[] ascii){ //Kan lave det her mere OOP ved at lave
     }
     Console.WriteLine();
 }
+
+//Print room description.
+public void PrintDescription (string text){
+    Console.WriteLine(text);
+    Console.WriteLine(""); //empty lines
+    Console.WriteLine(""); //empty lines
+    Console.WriteLine(""); //empty lines
+    Console.ResetColor();
 }
+
+//Print choices in color.
+public void PrintChoice1 (string choice1, string choice2){
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("1) " + choice1);
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.WriteLine("2) " + choice2);
+    Console.ResetColor();
+}
+}
+
 

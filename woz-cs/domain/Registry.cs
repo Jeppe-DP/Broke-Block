@@ -23,6 +23,15 @@ public class Registry {
     return (commands.ContainsKey(command) ? GetCommand(command) : fallback).Execute(context, command, parameters);
   }
   
+  // ✅ NEW DISPATCH — REQUIRED FOR CHOICES (1 or 2)
+  public string Dispatch(string command, string[] parameters)
+  {
+    if (commands.ContainsKey(command))
+      return commands[command].Execute(context, command, parameters);
+
+    return fallback.Execute(context, command, parameters);
+  }
+
   public ICommand GetCommand (string commandName) {
     return commands[commandName];
   }
