@@ -11,6 +11,7 @@ public class Node {
   
   public Node (string name) {
     this.name = name;
+    Error = "";
   }
   
   public String GetName () {
