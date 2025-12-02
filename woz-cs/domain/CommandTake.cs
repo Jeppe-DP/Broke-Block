@@ -8,7 +8,7 @@ class CommandTake : BaseCommand, ICommand
       description = "Pick up an item.";
   }
 
-  public void Execute (Context context, string command, string[] parameters)
+  public string Execute (Context context, string command, string[] parameters)
   {
     string name = parameters[0].ToLower ();
 
@@ -19,11 +19,11 @@ class CommandTake : BaseCommand, ICommand
     if (item != null)
     {
       Inventory.Add (item);
-      Console.WriteLine ("You picked up the " + name);
+      return "Du samlede " + name + " op";
     }
     else
     {
-      Console.WriteLine ("There is no " + name + " here.");
+      return "Der er ingen " + name + " her.";
     }
   }
 }

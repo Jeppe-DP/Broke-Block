@@ -3,6 +3,7 @@
 public class WinningScreen{
 
     private UIManager ui;
+    private string description;
 
     public static readonly string[] Win = {
     @"",
@@ -22,9 +23,10 @@ public class WinningScreen{
     @"                  Tillykke du har reddet Broke Block!                   ",
 };
 
-public WinningScreen()
+public WinningScreen (string description)
 {
     ui = new UIManager(); //Genbruge UIManager}
+    this.description = description;
 }
 
 public void Show(){
@@ -42,6 +44,7 @@ public void Show(){
     Quiz quiz = new Quiz ();
     quiz.Start();
 
+    Console.WriteLine(description);
  }
 }
 
