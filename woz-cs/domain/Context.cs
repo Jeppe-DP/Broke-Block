@@ -15,6 +15,7 @@ public class Context
       "behold råvarer",
       "behold veje"
     };
+    Description descriptiontxt = new Description();
 
   public Context (Space node)
   {
@@ -32,7 +33,7 @@ public class Context
 
     if (badChoices.Contains (next.GetName ()))
     {
-      string description = next.GetDescription();
+      string description = descriptiontxt.GetDescription(next.GetName());
       current = Game.GetWorld().GetEntry();
 
       Game.State = GameState.GameOver;
@@ -41,7 +42,7 @@ public class Context
     }
     else if (next.GetName ().Equals ("forbedre veje"))
     {
-      string description = next.GetDescription();
+      string description = descriptiontxt.GetDescription(next.GetName());
       current = next;
 
       Game.State = GameState.Won;
