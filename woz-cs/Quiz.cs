@@ -114,7 +114,7 @@ public class Quiz
         }
 
         // Afslut quiz
-        Console.WriteLine($"🎯 DIN SCORE: {score} ud af {questions.Count} rigtige!");
+        Console.WriteLine($"🎯 DIN SCORE: Du fik {score} ud af {questions.Count} rigtige!");
         Console.WriteLine("Tak for at spille! Tryk ENTER for at afslutte.");
         Console.ReadLine();
     }
