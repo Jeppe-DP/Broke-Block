@@ -2,7 +2,7 @@
  */
 
 public class Node {
-  public string Error { get ; set; }
+  public string Message { get ; set; }
 
   protected string name;
   protected Dictionary<string, Node> edges = new Dictionary<string, Node>();
@@ -11,7 +11,7 @@ public class Node {
   
   public Node (string name) {
     this.name = name;
-    Error = "";
+    Message = "tom";
   }
   
   public String GetName () {
@@ -52,7 +52,7 @@ public class Node {
     return null;
   }
 
-  public bool TransitionAllowed ()
+  public bool CheckItems ()
   {
     foreach (Item item in requiredItems)
     {

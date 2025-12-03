@@ -16,7 +16,7 @@ class CommandGo : BaseCommand, ICommand
     }
     else
     {
-      return "*" + context.Transition(parameters[0]);
+      return context.Transition(parameters[0]);
     }
   }
 }

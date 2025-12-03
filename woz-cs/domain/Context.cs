@@ -34,11 +34,10 @@ public class Context
 
     string description = "";
 
-    if (!current.TransitionAllowed())
+    if (!current.CheckItems())
     {
-      description = current.Error;
-      Game.State = GameState.GameOver;
-      current = Game.GetWorld().GetEntry();
+      description = current.Message;
+      current = from;
     }
     else if (badChoices.Contains(current.GetName()))
     {
@@ -54,7 +53,7 @@ public class Context
     }
     else
     {
-      description = current.Welcome ();
+      description = "*" + current.Welcome ();
     }
 
     return description;

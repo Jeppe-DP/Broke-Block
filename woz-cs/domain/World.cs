@@ -54,14 +54,14 @@ public class World {
     byg_hus.AddRequiredItem (søm);
     byg_hus.AddRequiredItem (træ);
 
-    byg_hus.Error = "Du havde ikke de fornødne materialer til at reparere husene!";
+    byg_hus.Message = "Du havde ikke de fornødne materialer til at reparere husene!";
 
     Item medicin = new Item ("medicin");
     
     byg_hus.AddItem (medicin);
     hospital.AddRequiredItem (medicin);
 
-    hospital.Error = "Du har ingen medicin";
+    hospital.Message = "Du har ingen medicin";
 
     Item sten = new Item ("sten");
 
@@ -73,7 +73,7 @@ public class World {
     samarbejde_med_bønder.AddItem (råvarer);
     byg_dæmninger.AddRequiredItem (råvarer);
 
-    byg_dæmninger.Error = "Du samlede ikke råvarerne op!";
+    byg_dæmninger.Message = "Du samlede ikke råvarerne op!";
 
     this.start = start;
   }
