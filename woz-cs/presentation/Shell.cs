@@ -47,15 +47,19 @@ public class Shell
       string line = terminal.GetInput ();
 
       // Check if input is "1" or "2" and convert it
-      currentRoom = game.GetContext().GetCurrent();
+
       if (line == "1" || line == "2")
       {
+        currentRoom = game.GetContext().GetCurrent();
         line = ConvertNumberChoice(line, currentRoom);
       }
 
 
       string response = game.ExecuteCmd (line);
       response = terminal.CheckClear (response);
+
+      // Always update currentRoom after any command
+      currentRoom = game.GetContext().GetCurrent();
 
       state = Game.State;
 
@@ -82,10 +86,13 @@ public class Shell
         default:
           ui.PrintDescription(response);
 
+          // CRITICAL: Update currentRoom after command execution
+          currentRoom = game.GetContext().GetCurrent();
+
           // Only print choices if we are still playing
           if (Game.State == GameState.Running)
           {
-            ui.PrintChoices(currentRoom);
+            ui.PrintChoices(currentRoom);  // Now shows CORRECT room's choices
           }
           break;
       }
