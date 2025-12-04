@@ -30,5 +30,41 @@ public void WriteTitle (string[] ascii){ //Kan lave det her mere OOP ved at lave
     }
     Console.WriteLine();
 }
+
+//print room descriptions.
+public void PrintDescription (string description){
+
+    Console.ResetColor();
+    Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    Console.WriteLine(description);
+    Console.WriteLine("");//empty
+    Console.WriteLine("");//empty
+    Console.WriteLine("");//empty lines
+    Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+}
+
+public void PrintChoices(Space room)
+{
+    var exitNames = room.GetExitNames(); // This is a List<string>
+
+    Console.WriteLine("Valgmuligheder:");
+
+    if (exitNames.Count >= 1)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("1: " + exitNames[0]);
+    }
+
+    if (exitNames.Count >= 2)
+    {
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine("2: " + exitNames[1]);
+    }
+
+    Console.ResetColor();
+}
+
+
+
 }
 

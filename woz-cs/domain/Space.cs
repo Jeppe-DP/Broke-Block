@@ -14,13 +14,6 @@ public class Space : Node {
 
     result += "Du er nu ved " + name + "\n\n";
     result += descriptiontxt.GetDescription (name);
-    result += "\n\n" + "Nuværende udgange er:";
-
-
-    foreach (String exit in exits)
-    {
-      result += "\n - " + exit;
-    }
 
     return result;
   }
@@ -32,4 +25,18 @@ public class Space : Node {
 
     return next;
   }
+
+  // Returns just the names of the exits
+  public List<string> GetExitNames()
+  {
+    return edges.Keys.ToList();
+  }
+
+  // Returns the actual Space objects
+  public List<Space> GetExitSpaces()
+  {
+    return edges.Values.Cast<Space>().ToList();
+  }
+
+
 }

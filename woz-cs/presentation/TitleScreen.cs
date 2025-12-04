@@ -2,15 +2,8 @@ public class TitleScreen{
 
     private UIManager ui;
 
-    public TitleScreen()
-    {
-        ui = new UIManager(); // creates new UI object
-    }
-
-    public void Show()  // <-- added parentheses
-    {
-        // Add ASCII title
-        string[] title = {  // <-- fixed syntax
+    // Add this static field
+    public static readonly string[] Art = {
             @"",
             @"",
             @"",
@@ -28,8 +21,18 @@ public class TitleScreen{
             @"                                   Velkommen til Broke Block.                                            "
         };
 
+
+    public TitleScreen(){
+
+        ui = new UIManager(); // creates new UI object
+    }
+
+
+   // Show method to display the title
+    public void Show()
+    {
         Console.ForegroundColor = ConsoleColor.Green;
-        ui.WriteTitle(title); //<-- shows ASCII text in console
+        ui.WriteTitle(Art); //<-- shows ASCII text in console
         Console.ResetColor();
 
         Console.WriteLine("Tryk ENTER for at starte...");
