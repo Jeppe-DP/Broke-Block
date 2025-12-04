@@ -100,7 +100,7 @@ class Description{
             +"Kort sagt: Arbejde er ikke bare et job - det er landet træningsprogram. Bedre arbejde = stærkere økonomi = alle vinder.";
             break;
 
-        case("forsæt uden samarbejde"):
+        case("fortsæt uden samarbejde"):
             description = "Rationerne bliver mindre og mindre, da der ikke er nok råvarer.\n"
             +"Beboerne af Broke-Block ender med at ikke have nok mad.\n"
             +"Nogle af beboerne vælger derfor at forlade Broke-Block, mens de resterende dør af sult.";
