@@ -1,29 +1,33 @@
 /* Command for picking up items
  */
 
-class CommandTake : BaseCommand, ICommand
+namespace Domain
 {
-  public CommandTake ()
+
+  class CommandTake : BaseCommand, ICommand
   {
-      description = "Pick up an item.";
-  }
-
-  public string Execute (Context context, string command, string[] parameters)
-  {
-    string name = parameters[0].ToLower ();
-
-    Space location = context.GetCurrent ();
-
-    Item? item = location.PickUpItem (name);
-
-    if (item != null)
+    public CommandTake ()
     {
-      Inventory.Add (item);
-      return "Du samlede " + name + " op";
+        description = "Pick up an item.";
     }
-    else
+
+    public string Execute (Context context, string command, string[] parameters)
     {
-      return "Der er ingen " + name + " her.";
+      string name = parameters[0].ToLower ();
+
+      Space location = context.GetCurrent ();
+
+      Item? item = location.PickUpItem (name);
+
+      if (item != null)
+      {
+        Inventory.Add (item);
+        return "Du samlede " + name + " op";
+      }
+      else
+      {
+        return "Der er ingen " + name + " her.";
+      }
     }
   }
 }

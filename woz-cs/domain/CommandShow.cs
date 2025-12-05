@@ -1,15 +1,19 @@
 /* Command for printing inventory
  */
 
-class CommandShow : BaseCommand, ICommand
+namespace Domain
 {
-  public CommandShow ()
-  {
-    description = "Print inventory.";
-  }
 
-  public string Execute (Context context, string command, string[] parameters)
+  class CommandShow : BaseCommand, ICommand
   {
-    return Inventory.PrintInventory ();
+    public CommandShow ()
+    {
+      description = "Print inventory.";
+    }
+
+    public string Execute (Context context, string command, string[] parameters)
+    {
+      return Inventory.PrintInventory ();
+    }
   }
 }

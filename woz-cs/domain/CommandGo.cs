@@ -1,22 +1,26 @@
 /* Command for transitioning between spaces
  */
 
-class CommandGo : BaseCommand, ICommand
+namespace Domain
 {
-  public CommandGo ()
+
+  class CommandGo : BaseCommand, ICommand
   {
-    description = "Follow an exit";
-  }
-  
-  public string Execute (Context context, string command, string[] parameters)
-  {
-    if (parameters.Length == 0)
+    public CommandGo ()
     {
-      return "I don't seem to know where that is 🤔";
+      description = "Follow an exit";
     }
-    else
+
+    public string Execute (Context context, string command, string[] parameters)
     {
-      return context.Transition(parameters[0]);
+      if (parameters.Length == 0)
+      {
+        return "I don't seem to know where that is 🤔";
+      }
+      else
+      {
+        return context.Transition(parameters[0]);
+      }
     }
   }
 }
