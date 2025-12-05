@@ -1,29 +1,43 @@
 /* Implementation of an inventory
  */
 
-public class Inventory
+namespace Domain
 {
-  private static List<Item> inventory = new List<Item>();
 
-  public static void Add (Item item)
+  public class Inventory
   {
-    inventory.Add (item);
-  }
+    private static List<Item> inventory = new List<Item>();
 
-  public static string PrintInventory ()
-  {
-    if (inventory.Count == 0)
+    public static void Add (Item item)
     {
-      return "Inventory er tom.";
+      inventory.Add (item);
     }
 
-    string result = "Inventory:\n\n";
-
-    for (int i = 0; i < inventory.Count; i++)
+    public static string PrintInventory ()
     {
-      result += inventory[i].ToString () + (i == inventory.Count - 1 ? "" : "\n");
+      if (inventory.Count == 0)
+      {
+        return "Inventory er tom.";
+      }
+
+      string result = "Inventory:\n\n";
+
+      for (int i = 0; i < inventory.Count; i++)
+      {
+        result += inventory[i].ToString () + (i == inventory.Count - 1 ? "" : "\n");
+      }
+
+      return result;
     }
 
-    return result;
+    public static bool Contains (string name)
+    {
+      foreach (Item item in inventory)
+      {
+        if (item.Name.Equals (name)) return true;
+      }
+
+      return false;
+    }
   }
 }

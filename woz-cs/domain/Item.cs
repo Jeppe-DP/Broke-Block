@@ -1,17 +1,21 @@
 /* Parent class for items in the game
  */
 
-public class Item
+namespace Domain
 {
-  public string Name { get; set; }
 
-  public Item (string name)
+  public class Item
   {
-    Name = name;
-  }
+    public string Name { get; set; }
 
-  public override string ToString ()
-  {
-    return Name;
+    public Item (string name)
+    {
+      Name = name;
+    }
+
+    public override string ToString ()
+    {
+      return Name;
+    }
   }
 }

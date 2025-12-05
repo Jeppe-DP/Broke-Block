@@ -1,38 +1,42 @@
-public class TitleScreen{
+namespace Presentation
+{
 
-    private UIManager ui;
+    public class TitleScreen{
 
-    public TitleScreen()
-    {
-        ui = new UIManager(); // creates new UI object
-    }
+        private UIManager ui;
 
-    public void Show()  // <-- added parentheses
-    {
-        // Add ASCII title
-        string[] title = {  // <-- fixed syntax
-            @"",
-            @"",
-            @"",
-            @"",
-            @"  /$$$$$$$   /$$$$$$$    /$$$$$$    /$$   /$$/   $$$$$$$$       /$$$$$$$   /$$         /$$$$$$    /$$$$$$   /$$   /$$",
-            @" | $$__  $$ | $$__  $$  /$$__  $$  | $$  /$$/  | $$_____/      | $$__  $$ | $$        /$$__  $$  /$$__  $$ | $$  /$$/",
-            @" | $$  \ $$ | $$  \ $$ | $$  \ $$  | $$ /$$/   | $$            | $$  \ $$ | $$       | $$  \ $$ | $$  \__/ | $$ /$$/",
-            @" | $$$$$$$  | $$$$$$$/ | $$  | $$  | $$$$$/    | $$$$$         | $$$$$$$  | $$       | $$  | $$ | $$       | $$$$$/",
-            @" | $$__  $$ | $$__  $$ | $$  | $$  | $$  $$    | $$__/         | $$__  $$ | $$       | $$  | $$ | $$       | $$  $$",
-            @" | $$  \ $$ | $$  \ $$ | $$  | $$  | $$\  $$   | $$            | $$  \ $$ | $$       | $$  | $$ | $$    $$ | $$\  $$",
-            @" | $$$$$$$/ | $$  | $$ |  $$$$$$/  | $$ \  $$  | $$$$$$$$      | $$$$$$$/ | $$$$$$$$ |  $$$$$$/ |  $$$$$$/ | $$ \  $$",
-            @" |_______/  |__/  |__/  \______/   |__/  \__/  |________/      |_______/  |________/  \______/   \______/  |__/  \__/",
-            @"",
-            @"",
-            @"                                   Velkommen til Broke Block.                                            "
-        };
+        public TitleScreen()
+        {
+            ui = new UIManager(); // creates new UI object
+        }
 
-        Console.ForegroundColor = ConsoleColor.Green;
-        ui.WriteTitle(title); //<-- shows ASCII text in console
-        Console.ResetColor();
+        public void Show()  // <-- added parentheses
+        {
+            // Add ASCII title
+            string[] title = {  // <-- fixed syntax
+                @"",
+                @"",
+                @"",
+                @"",
+                @"  /$$$$$$$   /$$$$$$$    /$$$$$$    /$$   /$$/   $$$$$$$$       /$$$$$$$   /$$         /$$$$$$    /$$$$$$   /$$   /$$",
+                @" | $$__  $$ | $$__  $$  /$$__  $$  | $$  /$$/  | $$_____/      | $$__  $$ | $$        /$$__  $$  /$$__  $$ | $$  /$$/",
+                @" | $$  \ $$ | $$  \ $$ | $$  \ $$  | $$ /$$/   | $$            | $$  \ $$ | $$       | $$  \ $$ | $$  \__/ | $$ /$$/",
+                @" | $$$$$$$  | $$$$$$$/ | $$  | $$  | $$$$$/    | $$$$$         | $$$$$$$  | $$       | $$  | $$ | $$       | $$$$$/",
+                @" | $$__  $$ | $$__  $$ | $$  | $$  | $$  $$    | $$__/         | $$__  $$ | $$       | $$  | $$ | $$       | $$  $$",
+                @" | $$  \ $$ | $$  \ $$ | $$  | $$  | $$\  $$   | $$            | $$  \ $$ | $$       | $$  | $$ | $$    $$ | $$\  $$",
+                @" | $$$$$$$/ | $$  | $$ |  $$$$$$/  | $$ \  $$  | $$$$$$$$      | $$$$$$$/ | $$$$$$$$ |  $$$$$$/ |  $$$$$$/ | $$ \  $$",
+                @" |_______/  |__/  |__/  \______/   |__/  \__/  |________/      |_______/  |________/  \______/   \______/  |__/  \__/",
+                @"",
+                @"",
+                @"                                   Velkommen til Broke Block.                                            "
+            };
 
-        Console.WriteLine("Tryk ENTER for at starte...");
-        Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            ui.WriteTitle(title); //<-- shows ASCII text in console
+            Console.ResetColor();
+
+            Console.WriteLine("Tryk ENTER for at starte...");
+            Console.ReadLine();
+        }
     }
 }

@@ -1,51 +1,49 @@
 //Print ASCII style winning screen.
 
-public class WinningScreen{
-
-    private UIManager ui;
-    private string description;
-
-    public static readonly string[] Win = {
-    @"",
-    @"",
-    @"",
-    @" █████ █████                        █████   ███   █████  ███             ███",
-    @"░░███ ░░███                        ░░███   ░███  ░░███  ░░░            ░███",
-    @"░░███ ███    ██████  █████ ████    ░███   ░███   ░███  ████  ████████  ░███",
-    @"░░█████    ███░░███░░███ ░███     ░███   ░███   ░███ ░░███ ░░███░░███ ░███",
-    @"░░███    ░███ ░███ ░███ ░███     ░░███  █████  ███   ░███  ░███ ░███ ░███",
-    @" ░███    ░███ ░███ ░███ ░███      ░░░█████░█████░    ░███  ░███ ░███ ░░░",
-    @" █████   ░░██████  ░░████████       ░░███ ░░███      █████ ████ █████ ███",
-    @" ░░░░░     ░░░░░░    ░░░░░░░░         ░░░   ░░░      ░░░░░ ░░░░ ░░░░░ ░░░",
-    @"",
-    @"",
-    @"",
-    @"                  Tillykke du har reddet Broke Block!                   ",
-};
-
-public WinningScreen (string description)
+namespace Presentation
 {
-    ui = new UIManager(); //Genbruge UIManager}
-    this.description = description;
+
+    public class WinningScreen{
+
+        private UIManager ui;
+        private string description;
+
+        public static readonly string[] Win = {
+        @"",
+        @"",
+        @"",
+        @" █████ █████                        █████   ███   █████  ███             ███",
+        @"░░███ ░░███                        ░░███   ░███  ░░███  ░░░            ░███",
+        @"░░███ ███    ██████  █████ ████    ░███   ░███   ░███  ████  ████████  ░███",
+        @"░░█████    ███░░███░░███ ░███     ░███   ░███   ░███ ░░███ ░░███░░███ ░███",
+        @"░░███    ░███ ░███ ░███ ░███     ░░███  █████  ███   ░███  ░███ ░███ ░███",
+        @" ░███    ░███ ░███ ░███ ░███      ░░░█████░█████░    ░███  ░███ ░███ ░░░",
+        @" █████   ░░██████  ░░████████       ░░███ ░░███      █████ ████ █████ ███",
+        @" ░░░░░     ░░░░░░    ░░░░░░░░         ░░░   ░░░      ░░░░░ ░░░░ ░░░░░ ░░░",
+        @"",
+        @"",
+        @"",
+        @"                  Tillykke du har reddet Broke Block!                   ",
+    };
+
+    public WinningScreen (string description)
+    {
+        ui = new UIManager(); //Genbruge UIManager}
+        this.description = description;
+    }
+
+    public void Show(){
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        ui.WriteTitle(Win); //<-- shows ASCII text in console
+        Console.ResetColor();
+
+        Console.WriteLine(description + "\n\n");
+        Console.WriteLine("Tryk ENTER for at starte quizzen.");
+        Console.ReadLine();
+
+        //starter quizzen
+        Quiz quiz = new Quiz ();
+        quiz.Start();
+    }
+    }
 }
-
-public void Show(){
-    Console.ForegroundColor = ConsoleColor.Yellow;
-    ui.WriteTitle(Win); //<-- shows ASCII text in console
-    Console.ResetColor();
-
-    Console.WriteLine("🎉🎉 Broke-Block har bedre veje nu og lastbilerne kan transportere varer frem og tilbage.\n"
-    +"Broke-Block sælger mange varer til nabolandene og økonomien vokser.\n"
-    +"Tillykke!Broke-Block er nu kommet ud af fattigdom.\n"
-    +"Beboerne er glade og kan nu leve i et velfungerende samfund");
-    Console.ReadLine();
-
-    //starter quizzen
-    Quiz quiz = new Quiz ();
-    quiz.Start();
-
-    Console.WriteLine(description);
- }
-}
-
-

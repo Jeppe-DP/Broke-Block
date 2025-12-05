@@ -1,47 +1,53 @@
 /* Class that handles interaction with Domain
  */
 
-public class Shell
+using Domain;
+
+namespace Presentation
 {
-  private Game game;
-  private Terminal terminal;
 
-  public Shell (Game instance)
+  public class Shell
   {
-    game = instance;
-    terminal = new Terminal ();
-  }
+    private Game game;
+    private Terminal terminal;
 
-  public void Run ()
-  {
-    terminal.PrintWelcome ();
-    terminal.Clear ();
-    terminal.Print(game.GetContext().GetCurrent().Welcome());
-
-    GameState state = Game.State;
-
-    while (state != GameState.Done)
+    public Shell (Game instance)
     {
-      string line = terminal.GetInput ();
-      string response = game.ExecuteCmd (line);
-      response = terminal.CheckClear (response);
+      game = instance;
+      terminal = new Terminal ();
+    }
 
-      state = Game.State;
+    public void Run ()
+    {
+      terminal.PrintWelcome ();
+      terminal.Clear ();
+      terminal.Print(game.GetContext().GetCurrent().Welcome());
 
-      switch (state)
+      GameState state = Game.State;
+
+      while (state != GameState.Done)
       {
-        case GameState.GameOver:
-          terminal.PrintGameOver (response);
-          terminal.Clear ();
-          terminal.Print (game.RestartGame ());
-          break;
-        case GameState.Won:
-          terminal.PrintWinScreen (response);
-          state = game.EndGame ();
-          break;
-        default:
-          terminal.Print (response);
-          break;
+        string line = terminal.GetInput ();
+        string response = game.ExecuteCmd (line);
+        response = terminal.CheckClear (response);
+
+        state = Game.State;
+
+        switch (state)
+        {
+          case GameState.GameOver:
+            terminal.PrintGameOver (response);
+            terminal.Clear ();
+            terminal.Print (game.RestartGame ());
+            break;
+          case GameState.Won:
+            terminal.PrintWinScreen (response);
+            state = game.EndGame ();
+            break;
+          default:
+            terminal.Print (response);
+            break;
+        }
       }
     }
   }

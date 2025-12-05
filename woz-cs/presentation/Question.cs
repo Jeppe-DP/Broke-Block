@@ -1,4 +1,8 @@
 //Question klasse - indeholder vores spm og deres svar muligheder
+
+namespace Presentation
+{
+
 public class Question
 {
     public string Text;
@@ -12,4 +16,5 @@ public class Question
         Answers = answers;
        this.CorrectAnswer = CorrectAnswer;
     }
+}
 }
