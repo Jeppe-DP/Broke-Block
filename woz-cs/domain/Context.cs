@@ -30,8 +30,10 @@ namespace Domain
       return current;
     }
 
-    public string Transition (string direction)
+    public string Transition (string choice)
     {
+      string direction = ConvertChoice (choice);
+
       Space from = current;
       current = current.FollowEdge(direction);
 
@@ -60,6 +62,19 @@ namespace Domain
       }
 
       return description;
+    }
+
+    public string ConvertChoice(string input)
+    {
+      List<string> exitNames = current.GetEdges();
+
+      string direction = "";
+
+      if (input == "1") direction = exitNames[0];
+
+      if (input == "2") direction = exitNames[1];
+
+      return direction;
     }
   }
 }

@@ -12,7 +12,7 @@ namespace Domain
     public string Welcome () {
       string result = "";
 
-      HashSet<string> exits = edges.Keys.ToHashSet();
+      List<string> exits = GetEdges ();
 
       result += "Du er nu ved " + name + "\n\n";
       result += descriptiontxt.GetDescription (name);

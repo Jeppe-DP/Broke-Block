@@ -25,6 +25,11 @@ namespace Domain
       edges.Add(name, node);
     }
 
+    public List<string> GetEdges ()
+    {
+      return edges.Keys.ToList ();
+    }
+
     public virtual Node FollowEdge (string direction) {
       return edges[direction];
     }
