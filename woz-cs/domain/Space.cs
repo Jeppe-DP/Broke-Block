@@ -13,7 +13,7 @@ namespace Domain
 
       HashSet<string> exits = edges.Keys.ToHashSet();
 
-      result += "Du er nu ved " + name + "\n\n";
+      result += "Du er nu ved: " + name + "\n\n";
       result += descriptiontxt.GetDescription (name);
       result += "\n\n" + "Nuværende udgange er:";
 

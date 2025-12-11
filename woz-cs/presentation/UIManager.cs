@@ -41,8 +41,6 @@ namespace Presentation
             Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
             Console.WriteLine(description);
             Console.WriteLine("");//empty
-            Console.WriteLine("");//empty
-            Console.WriteLine("");//empty lines
             Console.WriteLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
         }
 

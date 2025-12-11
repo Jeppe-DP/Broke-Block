@@ -9,8 +9,12 @@ class Description{
             description = "Du er borgermester for den afrikanske landsby, Broke-Block.\n"
             +"Landsbyens har været hårdt ramt af tørke, hungersnød og naturkatastrofer. \n"
             +"Byens huse er utætte og ødelagte, de har brug for en kærlig hånd.\n"
+            +"Mens du er i byen, ser du, at der ligger en hammer.\n"
             +"Vil du vælge at blive i byen for at snakke med borgerne?\n"
-            +"Eller vil du vandre ud i vildnis for at finde byggemateriale?";
+            +"Eller vil du vandre ud i vildnis for at finde byggemateriale?\n\n"
+            +"Indtast enten 1 eller 2 for at vælge en af udgangene\n"
+            +"For at samle ting op i spillet, brug kommandoen ´tag´\n"
+            +"Skriv ´hjælp´ for at se øvrige kommandoer";
             break;
 
         case("by"):
@@ -18,13 +22,13 @@ class Description{
             +"På vej hen til rådhuset går du forbi en lokal nabolag.\n"
             +"Husene har stærkt brug for hjælp, da byggningerne er forfalden.\n"
             +"En lokal beboer, Kofi går op til dig med to forskellige ting.\n"
-            +"Vil du vælge om feje støv og sten væk fra vejene? Eller modtag hammer, søm og træ til at bygge?";
+            +"Vil du vælge om feje støv og sten væk fra vejene? Eller tag søm og træ til at bygge?\n\n";
             break;
 
         case("vildnis"):
             description = "Efter du har examineret husene i landsbyen, indser du hvor vigtigt det er at reparere borgernes huse.\n"
             +"Så du samler et mindre hold og kører ud i vildmarken for at finde træ og andre potentielle byggematerialer.\n"
-            +"Efter i har samlet træ og sten i noget tid, spørger din cheufeur om i skal vende tilbage til landsbyen eller samle mere materiale.\n"
+            +"Efter i har samlet træ og søm i noget tid, spørger din cheufeur om i skal vende tilbage til landsbyen eller samle mere materiale.\n"
             +"Vil du vandre længere væk og samle mere materiale eller vil du vende tilbage til byen?";
             break;
 

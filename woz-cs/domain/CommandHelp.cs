@@ -24,7 +24,7 @@ namespace Domain
       }
 
       // present list of commands
-      string result = "Commands:\n\n";
+      string result = "Der er følgende mulige kommandoer:\n\n";
       foreach (String commandName in commandNames) {
         string description = registry.GetCommand(commandName).GetDescription();
         result += commandName + ": " + description + "\n";

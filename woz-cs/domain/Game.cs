@@ -26,15 +26,10 @@ namespace Domain
 
     private void InitRegistry()
     {
-      ICommand cmdExit = new CommandExit();
-      registry.Register("exit", cmdExit);
-      registry.Register("quit", cmdExit);
-      registry.Register("bye", cmdExit);
+      registry.Register("afslut", new CommandExit());
       registry.Register("vælg", new CommandGo());
-      registry.Register("help", new CommandHelp(registry));
-      registry.Register("take", new CommandTake());
-      registry.Register("modtag", new CommandTake());
-      registry.Register("show", new CommandShow());
+      registry.Register("hjælp", new CommandHelp(registry));
+      registry.Register("tag", new CommandTake());
       registry.Register("vis", new CommandShow());
     }
 

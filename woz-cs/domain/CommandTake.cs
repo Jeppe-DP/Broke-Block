@@ -8,7 +8,7 @@ namespace Domain
   {
     public CommandTake ()
     {
-        description = "Pick up an item.";
+        description = "Saml en ting op";
     }
 
     public string Execute (Context context, string command, string[] parameters)

@@ -14,7 +14,7 @@ namespace Domain
 
     public Node (string name) {
       this.name = name;
-      Message = "tom";
+      Message = "Tom";
     }
 
     public String GetName () {

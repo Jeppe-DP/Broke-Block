@@ -49,26 +49,32 @@ namespace Domain
       Item søm = new Item ("søm");
       Item træ = new Item ("træ");
 
-      by.AddItem (hammer);
+      start.AddItem (hammer);
+
+      vildnis_byggematerialer.AddRequiredItem (hammer);
+      by.AddRequiredItem (hammer);
+
+      vildnis_byggematerialer.Message = "Husk at samle hammeren op - du får brug for den!";
+      by.Message = "Husk at samle hammeren op - du får brug for den!";
+
       by.AddItem (søm);
       by.AddItem (træ);
 
-      byg_hus.AddRequiredItem (hammer);
       byg_hus.AddRequiredItem (søm);
       byg_hus.AddRequiredItem (træ);
 
-      byg_hus.Message = "Du havde ikke de fornødne materialer til at reparere husene!";
+      byg_hus.Message = "Du skal bruge både træ og søm til at bygge husene!";
 
       Item medicin = new Item ("medicin");
 
       byg_hus.AddItem (medicin);
       hospital.AddRequiredItem (medicin);
 
-      hospital.Message = "Du har ingen medicin";
+      hospital.Message = "Du har ingen medicin!";
 
       Item sten = new Item ("sten");
 
-      vildnis_byggematerialer.AddItem (sten);
+      vildnis_byggematerialer.AddItem (søm);
       vildnis_byggematerialer.AddItem (træ);
 
       Item råvarer = new Item ("råvarer");
