@@ -1,4 +1,5 @@
 //Question klasse - indeholder vores spm og deres svar muligheder
+using Domain;
 
 namespace Presentation
 {

@@ -1,4 +1,5 @@
 //Print ASCII style Game Over screen.
+using Domain;
 
 namespace Presentation
 {

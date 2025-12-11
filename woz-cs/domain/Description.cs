@@ -53,7 +53,7 @@ class Description{
             +"Efter hårde, men succesfulde forhandlinger vender du tilbage til hospitalet med medicin og diverse ting.\n"
             +"Tag medicin og ressourcer, og sælg det videre eller giv Aziz og hospitalet ressourcerne\n"
             +"\n"
-            +"🏥 FACTA: SUNDHED = MASSER AF JOBS & EN SUPERPRODUKTIV BEFOLKNING\n"
+            +"🏥 FAKTA: SUNDHED = MASSER AF JOBS & EN SUPERPRODUKTIV BEFOLKNING\n"
             +"💼 Sundhed = Jobmaskine. Universel sundhedsdækning skaber en hel industri af jobs: Læger, sygeplejersker, portører, rengøring, admin - det er et kæmpe job-sikkerhedsnet!\n"
             +"💪 Rask befolkning = Mere værdiskabelse. Når folk ikke er syge, møder de op på arbejde, er mere effektive og bidrage mere til samfundet. Det er den ultimative win-win.\n"
             +"Kort sagt: Investering i sundhed er en dobbelt gevinst: Den skaber jobs NU og sikrer en produktiv befolkning som kan skabe endnu flere jobs i fremtiden";
@@ -74,7 +74,7 @@ class Description{
             +"Der er nogle bønder i Broke-Block, der spørger dig, om du vil hjælpe dem med at forbedre markerne og plante afgrøder.\n"
             +"Vil du samarbejde med bønderne eller lade dem styre det selv?\n"
             +"\n"
-            +"📚 FACTA: UDDANNELSE = DIN PERSONLIGE PENGEMASKINE\n"
+            +"📚 FAKTA: UDDANNELSE = DIN PERSONLIGE PENGEMASKINE\n"
             +"🎓 Flere år på skolebænken = flere penge i lommen. Global statistik viser det klart og tydeligt: For hvert ekstra år du uddanner dig, stiger din timeløn med hele 9%. Det er ren matematik!\n"
             +"💼 Uddannelse + Arbejde = Fattigdom på flugt. Sammensat skaber de den ultimative one-two punch mod fattigdom. Det er de vigtigste våben i kampen.\n"
             +"Kort sagt: At investere i uddannelse er som at opgradere sin karakter i et spil – jo højere level, jo bedre loot (løn) får du. Det er den sikreste vej til en federe indtægt.";
@@ -94,13 +94,13 @@ class Description{
             +"Vil du bygge en dæmning for at stoppe oversvømmelserne? Eller vælger du at ignorere floden?\n"
             //tilføjet fakta boks til quizzen
             +"\n"
-            +"💼 FACTA: ARBEJDE = LANDETS SUPERHELTE-KRÆFTER.\n"
+            +"💼 FAKTA: ARBEJDE = LANDETS SUPERHELTE-KRÆFTER.\n"
             +"🚀 Arbejde får økonomien til at EKSPLODERE (på en god måde)! Når folk bliver bedre til deres jobs, bliver hele landet rigere. Det er som et hold der leveller op - alle bliver stærkere.\n"
             +"⚡ Effektivitet = den hemmelige sauce! Jo bedre vi bliver, jo flere fede jobs opstår. Og de kedelige, uproduktive jobs? Dem sparker vi ud - de er ikke worth it længere.\n"
             +"Kort sagt: Arbejde er ikke bare et job - det er landet træningsprogram. Bedre arbejde = stærkere økonomi = alle vinder.";
             break;
 
-        case("forsæt uden samarbejde"):
+        case("fortsæt uden samarbejde"):
             description = "Rationerne bliver mindre og mindre, da der ikke er nok råvarer.\n"
             +"Beboerne af Broke-Block ender med at ikke have nok mad.\n"
             +"Nogle af beboerne vælger derfor at forlade Broke-Block, mens de resterende dør af sult.";
@@ -112,7 +112,7 @@ class Description{
             +"Afgrøderne på marken vokser bedre nu, hvor byen har rigeligt adgang til vand, og der er nu overskud af råvarer.\n"
             +"Vil du sælge de overskydende råvarer til nabolande?\n"
             +"\n"
-            +"🌍 FACTA: KLIMAÆNDRINGER = DEN STØRSTE PARTYCRASHER I VERDENSHISTORIEN\n"
+            +"🌍 FAKTA: KLIMAÆNDRINGER = DEN STØRSTE PARTYCRASHER I VERDENSHISTORIEN\n"
             +"💸 Fattigdom? Sværere nu. Klimaet gør det SVÆRERE at blive rig. Det er som at prøve at lave en gruppeopgave, hvor opgaven hele tiden bliver slettet af en mystisk kraft lige inden afleveringen.\n"
             +"🏙️ Byer skal være katastrofe-klare. Fremtiden handler ikke om at bygge de flotteste byer, men om at bygge de SEJESTE byer - dem der kan tåle en oversvømmelse eller en storm uden at gå i stykker. Tænk på det som at lave en systembackup af hele samfundet.\n"
             +"Kort sagt: Hvis din by kan overleve en apokalypse, kan den også hjælpe med at bekæmpe fattigdom. Det handler om at være smartere end vejret.";
@@ -131,7 +131,7 @@ class Description{
             +"Broke-Blocks veje er meget dårlige, og de store lastbiler kan ikke køre på de små grusveje.\n"
             +"Vil du bruge penge på at bygge nye veje eller beholde pengene selv?\n"
             +"\n"
-            +"💸 FACTA: SÅDAN BLIVER HANDEL TIL FLERE PENGE I LOMMERNE\n"
+            +"💸 FAKTA: SÅDAN BLIVER HANDEL TIL FLERE PENGE I LOMMERNE\n"
             +"🛒 Handel = Flere Jobs & Færre Fattige: Når lande handler, skal der laves flere ting. Flere ting = flere jobs. Flere jobs = færre som skal tigge om at låne en tier.\n"
             +"📈 Det Giver Vækst (og Mere Vækst): Hvert år kan handel booste landets økonomi med 1-1,5%. Det lyder måske lidt, men...\n"
             +"💰 Resultatet Efter 10 År? Ka-ching! Et helt årti med den her superkraft betyder, at den gennemsnitlige persons indkomst er steget med 10-20%. Så er der pludselig råd til både kantinen og en streamingtjeneste.\n"
@@ -167,4 +167,39 @@ class Description{
     }
     return description;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,6 +1,6 @@
 /* Class that acts as user interface
  */
-
+using Domain;
 
 namespace Presentation
 {

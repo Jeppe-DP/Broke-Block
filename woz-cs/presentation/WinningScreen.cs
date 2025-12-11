@@ -1,5 +1,7 @@
 //Print ASCII style winning screen.
 
+using Domain;
+
 namespace Presentation
 {
 

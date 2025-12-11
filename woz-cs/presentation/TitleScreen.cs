@@ -1,3 +1,5 @@
+using Domain;
+
 namespace Presentation
 {
 
@@ -34,7 +36,6 @@ namespace Presentation
             Console.ForegroundColor = ConsoleColor.Green;
             ui.WriteTitle(title); //<-- shows ASCII text in console
             Console.ResetColor();
-
             Console.WriteLine("Tryk ENTER for at starte...");
             Console.ReadLine();
         }

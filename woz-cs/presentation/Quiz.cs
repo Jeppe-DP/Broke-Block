@@ -1,8 +1,8 @@
 //class for the quiz in the game
+using Domain;
 
 namespace Presentation
 {
-
     public class Quiz
     {
         private List<Question> questions = new List<Question>();

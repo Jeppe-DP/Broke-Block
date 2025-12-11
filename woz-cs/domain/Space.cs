@@ -1,5 +1,4 @@
 /* Space class for modeling spaces (rooms, caves, ...)*/
-
 namespace Domain
 {
   public class Space : Node {
@@ -33,5 +32,18 @@ namespace Domain
 
       return next;
     }
+
+    // Returns just the names of the exits
+    public List<string> GetExitNames()
+    {
+      return edges.Keys.ToList();
+    }
+
+    // Returns the actual Space objects
+    public List<Space> GetExitSpaces()
+    {
+      return edges.Values.Cast<Space>().ToList();
+    }
+
   }
 }
