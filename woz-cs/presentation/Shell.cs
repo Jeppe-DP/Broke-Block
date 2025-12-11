@@ -39,6 +39,7 @@ namespace Presentation{
       var currentRoom = game.GetContext().GetCurrent(); //enables first room to have lines and colored choices too.
       ui.PrintDescription(currentRoom.Welcome());
       ui.PrintChoices(currentRoom);
+      string response = "";
 
 
       GameState state = Game.State;
@@ -54,10 +55,14 @@ namespace Presentation{
           currentRoom = game.GetContext().GetCurrent();
           line = ConvertNumberChoice(line, currentRoom);
         }
-
-
-        string response = game.ExecuteCmd (line);
-        response = terminal.CheckClear (response);
+        try
+        {
+          response = game.ExecuteCmd (line);
+          response = terminal.CheckClear (response);
+        }
+        catch
+        {
+        }
 
         // Always update currentRoom after any command
         currentRoom = game.GetContext().GetCurrent();
