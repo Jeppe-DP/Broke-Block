@@ -9,9 +9,9 @@ namespace Presentation
   {
     public string GetInput ()
     {
-      string? input = null;
+      string input = "";
 
-      while (input == null)
+      while (input == "")
       {
         Console.Write (">");
         input = Console.ReadLine ();
