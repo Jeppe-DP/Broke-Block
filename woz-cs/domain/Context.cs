@@ -15,7 +15,7 @@ namespace Domain
         "sælg medicin",
         "byg bar",
         "ignorere floden",
-        "forsæt uden samarbejde",
+        "fortsæt uden samarbejde",
         "behold råvarer",
         "behold veje"
       };

@@ -5,7 +5,6 @@ namespace Presentation
 {
     public class UIManager
     {
-    // Clear the console screen
 
         public void Clear()
         {
@@ -24,8 +23,8 @@ namespace Presentation
         //Print ASCII style title.
 
         public void WriteTitle (string[] ascii)
-        { //Kan lave det her mere OOP ved at lave en separat fil under UIManager ved at kalde den TitleScreen.cs
-            Clear(); //clears console screen.
+        {
+            Clear();
 
             foreach(string line in ascii){
 

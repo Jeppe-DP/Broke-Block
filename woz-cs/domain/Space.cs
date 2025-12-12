@@ -33,7 +33,7 @@ namespace Domain
       return next;
     }
 
-    // Returns just the names of the exits
+    // Returns just the names of the exits as a list
     public List<string> GetExitNames()
     {
       return edges.Keys.ToList();

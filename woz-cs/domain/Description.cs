@@ -1,3 +1,5 @@
+/*Defines descriptions of Space objects
+*/
 class Description{
     public string GetDescription(string name)
     {
@@ -161,9 +163,9 @@ class Description{
             +"Broke-Block sælger mange varer til nabolandene og økonomien vokser.\n"
             +"Tillykke!Broke-Block er nu kommet ud af fattigdom.\n"
             +"Beboerne er glade og kan nu leve i et velfungerende samfund.\n"
-            // FAKTA DEL (Den del, der muligvis forsvandt)
-            +"\n" // Tilføjer en tom linje for at adskille vindertekst og fakta
+            +"\n"
             +"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            + "🛣️ FAKTA: SÅDAN BLIVER VEJE TIL PENGEMASKINER \n"
             + "💰 Handel = Penge: God infrastruktur (veje, havne, internet) er din gratisbillet til at handle memes, ressourcepakker og alt andet med hele verden. Mere handel = færre fattigdomme.\n"
             + "🚗 Pendling = Job: En god vej betyder, at du faktisk kan komme til dit drømme-job i den der store, fjerne by, i stedet for at sidde fast i ingenting. Det kalder vi en karriere-vej (undskyld).\n"
             + "Kort sagt: Ingen gode veje = ingen penge. Det er simpelt matematik, folkens";

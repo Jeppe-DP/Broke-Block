@@ -26,14 +26,14 @@ namespace Presentation
 
     public GameOverScreen (string description)
     {
-        ui = new UIManager(); //Genbruge UIManager
+        ui = new UIManager(); //Genbruger UIManager
         this.description = description;
     }
 
     public void Show(){
 
         Console.ForegroundColor = ConsoleColor.Red;
-        ui.WriteTitle(Art); //<-- shows ASCII text in console
+        ui.WriteTitle(Art); // shows ASCII text in console
         Console.ResetColor();
 
         Console.WriteLine (description);

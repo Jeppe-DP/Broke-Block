@@ -30,16 +30,17 @@ namespace Presentation
 
     public WinningScreen (string description)
     {
-        ui = new UIManager(); //Genbruge UIManager}
+        ui = new UIManager(); //Genbruger UIManager
         this.description = description;
     }
 
     public void Show(){
         Console.ForegroundColor = ConsoleColor.Yellow;
-        ui.WriteTitle(Win); //<-- shows ASCII text in console
+        ui.WriteTitle(Win); // shows ASCII text in console
         Console.ResetColor();
 
         Console.WriteLine(description + "\n\n");
+        Console.WriteLine("Tillykke med at have vundet Broke-Block.\nNu kommer der en lille quiz, for at teste din viden om bekæmpelse af fattigdom.");
         Console.WriteLine("Tryk ENTER for at starte quizzen.");
         Console.ReadLine();
 

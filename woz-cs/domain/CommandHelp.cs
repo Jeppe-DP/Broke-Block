@@ -9,7 +9,7 @@ namespace Domain
 
     public CommandHelp (Registry registry) {
       this.registry = registry;
-      this.description = "Display a help message";
+      this.description = "Viser mulige kommandoer";
     }
 
     public string Execute (Context context, string command, string[] parameters) {
@@ -26,6 +26,8 @@ namespace Domain
       // present list of commands
       string result = "Der er følgende mulige kommandoer:\n\n";
       foreach (String commandName in commandNames) {
+        if(commandName == "vælg")
+          continue;
         string description = registry.GetCommand(commandName).GetDescription();
         result += commandName + ": " + description + "\n";
       }

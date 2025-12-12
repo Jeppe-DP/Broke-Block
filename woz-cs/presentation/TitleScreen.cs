@@ -12,10 +12,10 @@ namespace Presentation
             ui = new UIManager(); // creates new UI object
         }
 
-        public void Show()  // <-- added parentheses
+        public void Show()
         {
             // Add ASCII title
-            string[] title = {  // <-- fixed syntax
+            string[] title = {
                 @"",
                 @"",
                 @"",

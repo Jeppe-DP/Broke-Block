@@ -8,7 +8,7 @@ namespace Domain
   {
     public CommandGo ()
     {
-      description = "Follow an exit";
+      description = "Vælg mulighed";
     }
 
     public string Execute (Context context, string command, string[] parameters)

@@ -84,6 +84,8 @@ namespace Domain
 
       sælge_råvarer.Message = "Du samlede ikke råvarerne op!";
 
+      behold_råvarer.AddRequiredItem(råvarer);
+      behold_råvarer.Message = "Du samlede ikke råvarerne op!";
       this.start = start;
     }
 

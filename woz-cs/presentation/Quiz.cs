@@ -9,7 +9,6 @@ namespace Presentation
 
         public Quiz()
         {
-            // Spm 1
             questions.Add(new Question(
                 "Hvorfor er arbejde vigtigt for afskaffelse af fattigdom?",
                 new string[]{
@@ -21,7 +20,6 @@ namespace Presentation
                 1 // svarmulighed 1 er korrekt
             ));
 
-            // Spm 2
             questions.Add(new Question(
                 "Hvordan kan uddannelse hjælpe med afskaffelse af fattigdom?",
                 new string[]{
@@ -33,7 +31,6 @@ namespace Presentation
                 3 // svarmulighed 3 er korrekt
             ));
 
-            // Spm 3
             questions.Add(new Question(
                 "Hvordan kan sundhedsdækning bekæmpe fattigdom?",
                 new string[]{
@@ -45,7 +42,6 @@ namespace Presentation
                 4 // svarmulighed 4 er korrekt
             ));
 
-            // Spm 4
             questions.Add(new Question(
                 "Hvilken strategisk handling er essentiel for at beskytte befolkningen og forhindre naturkatastrofer i at forværre den økonomiske situation?",
                 new string[]{
@@ -57,7 +53,6 @@ namespace Presentation
                 1
             ));
 
-            // Spm 5
             questions.Add(new Question(
                 "Hvor mange procent stiger et lands indkomst typisk med efter et årti, som et resultat af øget global handel?",
                 new string[]{
@@ -69,7 +64,6 @@ namespace Presentation
                 3
             ));
 
-            // Spm 6
             questions.Add(new Question(
                 "Ifølge simpel matematik, folkens, hvad er infrastrukturs to største magter til at bekæmpe fattigdom?",
                 new string[]{
