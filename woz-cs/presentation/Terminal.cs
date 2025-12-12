@@ -7,16 +7,15 @@ namespace Presentation
 
   public class Terminal
   {
-    public string GetInput ()
+    public string? GetInput ()
     {
-      string input = "";
+      string? input = "";
 
       while (input == "")
       {
         Console.Write (">");
         input = Console.ReadLine ();
       }
-
       return input;
     }
 

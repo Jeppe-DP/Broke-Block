@@ -9,7 +9,7 @@ namespace Presentation
 
         public TitleScreen()
         {
-            ui = new UIManager(); // creates new UI object
+            ui = new UIManager();
         }
 
         public void Show()
@@ -34,7 +34,7 @@ namespace Presentation
             };
 
             Console.ForegroundColor = ConsoleColor.Green;
-            ui.WriteTitle(title); //<-- shows ASCII text in console
+            ui.WriteTitle(title); //shows ASCII text in console
             Console.ResetColor();
             Console.WriteLine("Tryk ENTER for at starte...");
             Console.ReadLine();

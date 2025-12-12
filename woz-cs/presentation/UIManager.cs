@@ -45,7 +45,7 @@ namespace Presentation
 
         public void PrintChoices(Space room)
         {
-            var exitNames = room.GetExitNames(); // This is a List<string>
+            List<string> exitNames = room.GetExitNames();
 
             Console.WriteLine("Valgmuligheder:");
 

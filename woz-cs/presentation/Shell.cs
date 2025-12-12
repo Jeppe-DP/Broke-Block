@@ -46,10 +46,11 @@ namespace Presentation{
 
       while (state != GameState.Done)
       {
-        string line = terminal.GetInput ();
+        string? line = terminal.GetInput ();
 
         // Check if input is "1" or "2" and convert it
-
+        if(line == null)
+          continue;
         if (line == "1" || line == "2")
         {
           currentRoom = game.GetContext().GetCurrent();

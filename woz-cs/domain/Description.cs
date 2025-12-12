@@ -32,7 +32,7 @@ class Description{
         case("vildnis"):
             description = "Efter du har examineret husene i landsbyen, indser du hvor vigtigt det er at reparere borgernes huse.\n"
             +"Så du samler et mindre hold og kører ud i vildmarken for at finde træ og andre potentielle byggematerialer.\n"
-            +"Efter i har samlet træ og søm i noget tid, spørger din cheufeur om i skal vende tilbage til landsbyen eller samle mere materiale.\n"
+            +"Efter i har samlet træ og søm i noget tid, spørger din chauffør om i skal vende tilbage til landsbyen eller samle mere materiale.\n"
             +"Vil du vandre længere væk og samle mere materiale eller vil du vende tilbage til byen?";
             break;
 
@@ -40,8 +40,9 @@ class Description{
             description = "Tilbage ved husene møder du Aziz og Kofi, de hjælper dig med at reparere husene.\n"
             +"Efterfølgende kommer du i snak med Aziz, som fortæller stolt at han er sygeplejerske hos det lokale hospital.\n"
             +"Aziz fortæller sørgmodigt, at hospitalet har stærkt behov for ressourcer.\n"
-            +"Heldigvis har du fået medicin fra en af nabolandene.\n "
-            +"Vil du give medicinen et hospitalet, eller beholde medicinen for dig selv indtil videre?";
+            +"Heldigvis har du fået medicin fra en af nabolandene.\n"
+            +"Vil du give medicinen et hospitalet, eller beholde medicinen for dig selv indtil videre? \n\n"
+            +"(Husk at samle medicinen op.)";
             break;
 
         case("feje"):
@@ -59,7 +60,7 @@ class Description{
         case("ressourcer til hospital"):
             description = "Hospitalet har nu fået bedre medicin og borgerne er sunde og raske.\n"
             +"Kofi klager over, at hans børn ikke har mulighed for uddannelse.\n"
-            +"Heldigvis, er der en forladt bygning der kan repereres\n"
+            +"Heldigvis, er der en forladt bygning der kan repereres.\n"
             +"Vil du bygge en skole, så børnene i Broke-Block kan få en uddannesle?\n"
             +"Eller vil du bygge en bar, så de voksne har et sted de kan komme væk fra deres børn?\n"
             +"\n"
@@ -94,7 +95,7 @@ class Description{
 
         case("byg bar"):
             description = "Du valgte at bygge en bar, denne bar har det hele.\n"
-            +"Menn hvis du gennemtænker det igen, en bar i broken-block..? Er det optimalt?\n"
+            +"Men hvis du gennemtænker det igen, en bar i broken-block..? Er det optimalt?\n"
             +"Der er mangel på sanitet, derfor opstår der alkoholforgiftning og alle de stakkels beboere er døde, inklusiv dig";
             break;
 
@@ -104,7 +105,6 @@ class Description{
             +"De seneste par dage har det regnet uafbrudt.\n"
             +"Du står ude på markerne for at hjælpe bønderne, når du lægger mærke til, at den lokale flod er begyndt at stige.\n"
             +"Vil du bygge en dæmning for at stoppe oversvømmelserne? Eller vælger du at ignorere floden?\n"
-            //tilføjet fakta boks til quizzen
             +"\n"
             +"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             +"💼 FAKTA: ARBEJDE = LANDETS SUPERHELTE-KRÆFTER.\n"
@@ -122,7 +122,8 @@ class Description{
         case("byg dæmninger"):
             description = "Du har bygget de mobile dæmninger, og vandet er stoppet med at stige.\n"
             +"Landsbyen og markerne bliver ikke oversvømmet.\n"
-            +"Afgrøderne på marken vokser bedre nu, hvor byen har rigeligt adgang til vand, og der er nu overskud af råvarer.\n"
+            +"Afgrøderne på marken vokser bedre nu, hvor byen har rigeligt adgang til vand, og der er nu overskud af råvarer.\n\n"
+            +"(Du har mulighed for at samle råvaver op.)\n\n"
             +"Vil du sælge de overskydende råvarer til nabolande?\n"
             +"\n"
             +"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
