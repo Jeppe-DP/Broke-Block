@@ -55,9 +55,11 @@ class Description{
             break;
 
         case("ressourcer til hospital"):
-            description = "Som borgermester, kontakter du andre nærliggende byer for at købe og forhandle om ressourcer til hospitalet.\n"
-            +"Efter hårde, men succesfulde forhandlinger vender du tilbage til hospitalet med medicin og diverse ting.\n"
-            +"Tag medicin og ressourcer, og sælg det videre eller giv Aziz og hospitalet ressourcerne\n"
+            description = "Hospitalet har nu fået bedre medicin og borgerne er sunde og raske.\n"
+            +"Kofi klager over, at hans børn ikke har mulighed for uddannelse.\n"
+            +"Heldigvis, er der en forladt bygning der kan repereres\n"
+            +"Vil du bygge en skole, så børnene i Broke-Block kan få en uddannesle?\n"
+            +"Eller vil du bygge en bar, så de voksne har et sted de kan komme væk fra deres børn?\n"
             +"\n"
             +"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             +"🏥 FAKTA: SUNDHED = MASSER AF JOBS & EN SUPERPRODUKTIV BEFOLKNING\n"
